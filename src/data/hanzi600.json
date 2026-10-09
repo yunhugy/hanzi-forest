@@ -1,0 +1,3674 @@
+[
+ {
+  "id": 1,
+  "char": "天",
+  "pinyin": "tiān",
+  "tier": 1
+ },
+ {
+  "id": 2,
+  "char": "地",
+  "pinyin": "dì",
+  "tier": 1
+ },
+ {
+  "id": 3,
+  "char": "人",
+  "pinyin": "rén",
+  "tier": 1
+ },
+ {
+  "id": 4,
+  "char": "你",
+  "pinyin": "nǐ",
+  "tier": 1
+ },
+ {
+  "id": 5,
+  "char": "我",
+  "pinyin": "wǒ",
+  "tier": 1
+ },
+ {
+  "id": 6,
+  "char": "他",
+  "pinyin": "tā",
+  "tier": 1
+ },
+ {
+  "id": 7,
+  "char": "一",
+  "pinyin": "yī",
+  "tier": 1
+ },
+ {
+  "id": 8,
+  "char": "二",
+  "pinyin": "èr",
+  "tier": 1
+ },
+ {
+  "id": 9,
+  "char": "三",
+  "pinyin": "sān",
+  "tier": 1
+ },
+ {
+  "id": 10,
+  "char": "四",
+  "pinyin": "sì",
+  "tier": 1
+ },
+ {
+  "id": 11,
+  "char": "五",
+  "pinyin": "wǔ",
+  "tier": 1
+ },
+ {
+  "id": 12,
+  "char": "上",
+  "pinyin": "shàng",
+  "tier": 1
+ },
+ {
+  "id": 13,
+  "char": "下",
+  "pinyin": "xià",
+  "tier": 1
+ },
+ {
+  "id": 14,
+  "char": "口",
+  "pinyin": "kǒu",
+  "tier": 1
+ },
+ {
+  "id": 15,
+  "char": "耳",
+  "pinyin": "ěr",
+  "tier": 1
+ },
+ {
+  "id": 16,
+  "char": "目",
+  "pinyin": "mù",
+  "tier": 1
+ },
+ {
+  "id": 17,
+  "char": "手",
+  "pinyin": "shǒu",
+  "tier": 1
+ },
+ {
+  "id": 18,
+  "char": "足",
+  "pinyin": "zú",
+  "tier": 1
+ },
+ {
+  "id": 19,
+  "char": "站",
+  "pinyin": "zhàn",
+  "tier": 1
+ },
+ {
+  "id": 20,
+  "char": "坐",
+  "pinyin": "zuò",
+  "tier": 1
+ },
+ {
+  "id": 21,
+  "char": "日",
+  "pinyin": "rì",
+  "tier": 1
+ },
+ {
+  "id": 22,
+  "char": "月",
+  "pinyin": "yuè",
+  "tier": 1
+ },
+ {
+  "id": 23,
+  "char": "水",
+  "pinyin": "shuǐ",
+  "tier": 1
+ },
+ {
+  "id": 24,
+  "char": "火",
+  "pinyin": "huǒ",
+  "tier": 1
+ },
+ {
+  "id": 25,
+  "char": "山",
+  "pinyin": "shān",
+  "tier": 1
+ },
+ {
+  "id": 26,
+  "char": "石",
+  "pinyin": "shí",
+  "tier": 1
+ },
+ {
+  "id": 27,
+  "char": "田",
+  "pinyin": "tián",
+  "tier": 1
+ },
+ {
+  "id": 28,
+  "char": "禾",
+  "pinyin": "hé",
+  "tier": 1
+ },
+ {
+  "id": 29,
+  "char": "对",
+  "pinyin": "duì",
+  "tier": 1
+ },
+ {
+  "id": 30,
+  "char": "云",
+  "pinyin": "yún",
+  "tier": 1
+ },
+ {
+  "id": 31,
+  "char": "雨",
+  "pinyin": "yǔ",
+  "tier": 1
+ },
+ {
+  "id": 32,
+  "char": "风",
+  "pinyin": "fēng",
+  "tier": 1
+ },
+ {
+  "id": 33,
+  "char": "花",
+  "pinyin": "huā",
+  "tier": 1
+ },
+ {
+  "id": 34,
+  "char": "鸟",
+  "pinyin": "niǎo",
+  "tier": 1
+ },
+ {
+  "id": 35,
+  "char": "虫",
+  "pinyin": "chóng",
+  "tier": 1
+ },
+ {
+  "id": 36,
+  "char": "六",
+  "pinyin": "liù",
+  "tier": 1
+ },
+ {
+  "id": 37,
+  "char": "七",
+  "pinyin": "qī",
+  "tier": 1
+ },
+ {
+  "id": 38,
+  "char": "八",
+  "pinyin": "bā",
+  "tier": 1
+ },
+ {
+  "id": 39,
+  "char": "九",
+  "pinyin": "jiǔ",
+  "tier": 1
+ },
+ {
+  "id": 40,
+  "char": "十",
+  "pinyin": "shí",
+  "tier": 1
+ },
+ {
+  "id": 41,
+  "char": "爸",
+  "pinyin": "bà",
+  "tier": 1
+ },
+ {
+  "id": 42,
+  "char": "妈",
+  "pinyin": "mā",
+  "tier": 1
+ },
+ {
+  "id": 43,
+  "char": "棋",
+  "pinyin": "qí",
+  "tier": 1
+ },
+ {
+  "id": 44,
+  "char": "鸡",
+  "pinyin": "jī",
+  "tier": 1
+ },
+ {
+  "id": 45,
+  "char": "马",
+  "pinyin": "mǎ",
+  "tier": 1
+ },
+ {
+  "id": 46,
+  "char": "土",
+  "pinyin": "tǔ",
+  "tier": 1
+ },
+ {
+  "id": 47,
+  "char": "不",
+  "pinyin": "bù",
+  "tier": 1
+ },
+ {
+  "id": 48,
+  "char": "字",
+  "pinyin": "zì",
+  "tier": 1
+ },
+ {
+  "id": 49,
+  "char": "词",
+  "pinyin": "cí",
+  "tier": 1
+ },
+ {
+  "id": 50,
+  "char": "语",
+  "pinyin": "yǔ",
+  "tier": 1
+ },
+ {
+  "id": 51,
+  "char": "句",
+  "pinyin": "jù",
+  "tier": 1
+ },
+ {
+  "id": 52,
+  "char": "子",
+  "pinyin": "zi",
+  "tier": 1
+ },
+ {
+  "id": 53,
+  "char": "画",
+  "pinyin": "huà",
+  "tier": 1
+ },
+ {
+  "id": 54,
+  "char": "打",
+  "pinyin": "dǎ",
+  "tier": 1
+ },
+ {
+  "id": 55,
+  "char": "桌",
+  "pinyin": "zhuō",
+  "tier": 1
+ },
+ {
+  "id": 56,
+  "char": "纸",
+  "pinyin": "zhǐ",
+  "tier": 1
+ },
+ {
+  "id": 57,
+  "char": "文",
+  "pinyin": "wén",
+  "tier": 1
+ },
+ {
+  "id": 58,
+  "char": "数",
+  "pinyin": "shù",
+  "tier": 1
+ },
+ {
+  "id": 59,
+  "char": "学",
+  "pinyin": "xué",
+  "tier": 1
+ },
+ {
+  "id": 60,
+  "char": "音",
+  "pinyin": "yīn",
+  "tier": 1
+ },
+ {
+  "id": 61,
+  "char": "乐",
+  "pinyin": "lè",
+  "tier": 1
+ },
+ {
+  "id": 62,
+  "char": "妹",
+  "pinyin": "mèi",
+  "tier": 1
+ },
+ {
+  "id": 63,
+  "char": "奶",
+  "pinyin": "nǎi",
+  "tier": 1
+ },
+ {
+  "id": 64,
+  "char": "白",
+  "pinyin": "bái",
+  "tier": 1
+ },
+ {
+  "id": 65,
+  "char": "皮",
+  "pinyin": "pí",
+  "tier": 1
+ },
+ {
+  "id": 66,
+  "char": "小",
+  "pinyin": "xiǎo",
+  "tier": 1
+ },
+ {
+  "id": 67,
+  "char": "桥",
+  "pinyin": "qiáo",
+  "tier": 1
+ },
+ {
+  "id": 68,
+  "char": "台",
+  "pinyin": "tái",
+  "tier": 1
+ },
+ {
+  "id": 69,
+  "char": "雪",
+  "pinyin": "xuě",
+  "tier": 1
+ },
+ {
+  "id": 70,
+  "char": "儿",
+  "pinyin": "ér",
+  "tier": 1
+ },
+ {
+  "id": 71,
+  "char": "草",
+  "pinyin": "cǎo",
+  "tier": 1
+ },
+ {
+  "id": 72,
+  "char": "家",
+  "pinyin": "jiā",
+  "tier": 1
+ },
+ {
+  "id": 73,
+  "char": "是",
+  "pinyin": "shì",
+  "tier": 1
+ },
+ {
+  "id": 74,
+  "char": "车",
+  "pinyin": "chē",
+  "tier": 1
+ },
+ {
+  "id": 75,
+  "char": "羊",
+  "pinyin": "yáng",
+  "tier": 1
+ },
+ {
+  "id": 76,
+  "char": "走",
+  "pinyin": "zǒu",
+  "tier": 1
+ },
+ {
+  "id": 77,
+  "char": "也",
+  "pinyin": "yě",
+  "tier": 1
+ },
+ {
+  "id": 78,
+  "char": "秋",
+  "pinyin": "qiū",
+  "tier": 1
+ },
+ {
+  "id": 79,
+  "char": "气",
+  "pinyin": "qì",
+  "tier": 1
+ },
+ {
+  "id": 80,
+  "char": "了",
+  "pinyin": "le",
+  "tier": 1
+ },
+ {
+  "id": 81,
+  "char": "树",
+  "pinyin": "shù",
+  "tier": 1
+ },
+ {
+  "id": 82,
+  "char": "叶",
+  "pinyin": "yè",
+  "tier": 1
+ },
+ {
+  "id": 83,
+  "char": "片",
+  "pinyin": "piàn",
+  "tier": 1
+ },
+ {
+  "id": 84,
+  "char": "大",
+  "pinyin": "dà",
+  "tier": 1
+ },
+ {
+  "id": 85,
+  "char": "飞",
+  "pinyin": "fēi",
+  "tier": 1
+ },
+ {
+  "id": 86,
+  "char": "会",
+  "pinyin": "huì",
+  "tier": 1
+ },
+ {
+  "id": 87,
+  "char": "个",
+  "pinyin": "gè",
+  "tier": 1
+ },
+ {
+  "id": 88,
+  "char": "船",
+  "pinyin": "chuán",
+  "tier": 1
+ },
+ {
+  "id": 89,
+  "char": "两",
+  "pinyin": "liǎng",
+  "tier": 1
+ },
+ {
+  "id": 90,
+  "char": "头",
+  "pinyin": "tóu",
+  "tier": 1
+ },
+ {
+  "id": 91,
+  "char": "看",
+  "pinyin": "kàn",
+  "tier": 1
+ },
+ {
+  "id": 92,
+  "char": "见",
+  "pinyin": "jiàn",
+  "tier": 1
+ },
+ {
+  "id": 93,
+  "char": "闪",
+  "pinyin": "shǎn",
+  "tier": 1
+ },
+ {
+  "id": 94,
+  "char": "星",
+  "pinyin": "xīng",
+  "tier": 1
+ },
+ {
+  "id": 95,
+  "char": "江",
+  "pinyin": "jiāng",
+  "tier": 1
+ },
+ {
+  "id": 96,
+  "char": "南",
+  "pinyin": "nán",
+  "tier": 1
+ },
+ {
+  "id": 97,
+  "char": "可",
+  "pinyin": "kě",
+  "tier": 1
+ },
+ {
+  "id": 98,
+  "char": "莲",
+  "pinyin": "lián",
+  "tier": 1
+ },
+ {
+  "id": 99,
+  "char": "鱼",
+  "pinyin": "yú",
+  "tier": 1
+ },
+ {
+  "id": 100,
+  "char": "东",
+  "pinyin": "dōng",
+  "tier": 1
+ },
+ {
+  "id": 101,
+  "char": "西",
+  "pinyin": "xī",
+  "tier": 1
+ },
+ {
+  "id": 102,
+  "char": "北",
+  "pinyin": "běi",
+  "tier": 1
+ },
+ {
+  "id": 103,
+  "char": "说",
+  "pinyin": "shuō",
+  "tier": 1
+ },
+ {
+  "id": 104,
+  "char": "春",
+  "pinyin": "chūn",
+  "tier": 1
+ },
+ {
+  "id": 105,
+  "char": "青",
+  "pinyin": "qīng",
+  "tier": 1
+ },
+ {
+  "id": 106,
+  "char": "蛙",
+  "pinyin": "wā",
+  "tier": 1
+ },
+ {
+  "id": 107,
+  "char": "夏",
+  "pinyin": "xià",
+  "tier": 1
+ },
+ {
+  "id": 108,
+  "char": "弯",
+  "pinyin": "wān",
+  "tier": 1
+ },
+ {
+  "id": 109,
+  "char": "就",
+  "pinyin": "jiù",
+  "tier": 1
+ },
+ {
+  "id": 110,
+  "char": "冬",
+  "pinyin": "dōng",
+  "tier": 1
+ },
+ {
+  "id": 111,
+  "char": "男",
+  "pinyin": "nán",
+  "tier": 1
+ },
+ {
+  "id": 112,
+  "char": "女",
+  "pinyin": "nǚ",
+  "tier": 1
+ },
+ {
+  "id": 113,
+  "char": "开",
+  "pinyin": "kāi",
+  "tier": 1
+ },
+ {
+  "id": 114,
+  "char": "关",
+  "pinyin": "guān",
+  "tier": 1
+ },
+ {
+  "id": 115,
+  "char": "正",
+  "pinyin": "zhèng",
+  "tier": 1
+ },
+ {
+  "id": 116,
+  "char": "反",
+  "pinyin": "fǎn",
+  "tier": 1
+ },
+ {
+  "id": 117,
+  "char": "远",
+  "pinyin": "yuǎn",
+  "tier": 1
+ },
+ {
+  "id": 118,
+  "char": "有",
+  "pinyin": "yǒu",
+  "tier": 1
+ },
+ {
+  "id": 119,
+  "char": "色",
+  "pinyin": "sè",
+  "tier": 1
+ },
+ {
+  "id": 120,
+  "char": "近",
+  "pinyin": "jìn",
+  "tier": 1
+ },
+ {
+  "id": 121,
+  "char": "听",
+  "pinyin": "tīng",
+  "tier": 1
+ },
+ {
+  "id": 122,
+  "char": "无",
+  "pinyin": "wú",
+  "tier": 1
+ },
+ {
+  "id": 123,
+  "char": "声",
+  "pinyin": "shēng",
+  "tier": 1
+ },
+ {
+  "id": 124,
+  "char": "去",
+  "pinyin": "qù",
+  "tier": 1
+ },
+ {
+  "id": 125,
+  "char": "还",
+  "pinyin": "hái",
+  "tier": 1
+ },
+ {
+  "id": 126,
+  "char": "来",
+  "pinyin": "lái",
+  "tier": 1
+ },
+ {
+  "id": 127,
+  "char": "多",
+  "pinyin": "duō",
+  "tier": 1
+ },
+ {
+  "id": 128,
+  "char": "少",
+  "pinyin": "shǎo",
+  "tier": 1
+ },
+ {
+  "id": 129,
+  "char": "黄",
+  "pinyin": "huáng",
+  "tier": 1
+ },
+ {
+  "id": 130,
+  "char": "牛",
+  "pinyin": "niú",
+  "tier": 1
+ },
+ {
+  "id": 131,
+  "char": "只",
+  "pinyin": "zhǐ",
+  "tier": 1
+ },
+ {
+  "id": 132,
+  "char": "边",
+  "pinyin": "biān",
+  "tier": 1
+ },
+ {
+  "id": 133,
+  "char": "鸭",
+  "pinyin": "yā",
+  "tier": 1
+ },
+ {
+  "id": 134,
+  "char": "苹",
+  "pinyin": "píng",
+  "tier": 1
+ },
+ {
+  "id": 135,
+  "char": "果",
+  "pinyin": "guǒ",
+  "tier": 1
+ },
+ {
+  "id": 136,
+  "char": "杏",
+  "pinyin": "xìng",
+  "tier": 1
+ },
+ {
+  "id": 137,
+  "char": "桃",
+  "pinyin": "táo",
+  "tier": 1
+ },
+ {
+  "id": 138,
+  "char": "书",
+  "pinyin": "shū",
+  "tier": 1
+ },
+ {
+  "id": 139,
+  "char": "包",
+  "pinyin": "bāo",
+  "tier": 1
+ },
+ {
+  "id": 140,
+  "char": "尺",
+  "pinyin": "chǐ",
+  "tier": 1
+ },
+ {
+  "id": 141,
+  "char": "作",
+  "pinyin": "zuò",
+  "tier": 1
+ },
+ {
+  "id": 142,
+  "char": "业",
+  "pinyin": "yè",
+  "tier": 1
+ },
+ {
+  "id": 143,
+  "char": "本",
+  "pinyin": "běn",
+  "tier": 1
+ },
+ {
+  "id": 144,
+  "char": "笔",
+  "pinyin": "bǐ",
+  "tier": 1
+ },
+ {
+  "id": 145,
+  "char": "刀",
+  "pinyin": "dāo",
+  "tier": 1
+ },
+ {
+  "id": 146,
+  "char": "课",
+  "pinyin": "kè",
+  "tier": 1
+ },
+ {
+  "id": 147,
+  "char": "早",
+  "pinyin": "zǎo",
+  "tier": 1
+ },
+ {
+  "id": 148,
+  "char": "校",
+  "pinyin": "xiào",
+  "tier": 1
+ },
+ {
+  "id": 149,
+  "char": "明",
+  "pinyin": "míng",
+  "tier": 1
+ },
+ {
+  "id": 150,
+  "char": "力",
+  "pinyin": "lì",
+  "tier": 1
+ },
+ {
+  "id": 151,
+  "char": "尘",
+  "pinyin": "chén",
+  "tier": 1
+ },
+ {
+  "id": 152,
+  "char": "从",
+  "pinyin": "cóng",
+  "tier": 1
+ },
+ {
+  "id": 153,
+  "char": "众",
+  "pinyin": "zhòng",
+  "tier": 1
+ },
+ {
+  "id": 154,
+  "char": "双",
+  "pinyin": "shuāng",
+  "tier": 1
+ },
+ {
+  "id": 155,
+  "char": "木",
+  "pinyin": "mù",
+  "tier": 1
+ },
+ {
+  "id": 156,
+  "char": "林",
+  "pinyin": "lín",
+  "tier": 1
+ },
+ {
+  "id": 157,
+  "char": "森",
+  "pinyin": "sēn",
+  "tier": 1
+ },
+ {
+  "id": 158,
+  "char": "条",
+  "pinyin": "tiáo",
+  "tier": 1
+ },
+ {
+  "id": 159,
+  "char": "立",
+  "pinyin": "lì",
+  "tier": 1
+ },
+ {
+  "id": 160,
+  "char": "升",
+  "pinyin": "shēng",
+  "tier": 1
+ },
+ {
+  "id": 161,
+  "char": "国",
+  "pinyin": "guó",
+  "tier": 1
+ },
+ {
+  "id": 162,
+  "char": "旗",
+  "pinyin": "qí",
+  "tier": 1
+ },
+ {
+  "id": 163,
+  "char": "中",
+  "pinyin": "zhōng",
+  "tier": 1
+ },
+ {
+  "id": 164,
+  "char": "红",
+  "pinyin": "hóng",
+  "tier": 1
+ },
+ {
+  "id": 165,
+  "char": "歌",
+  "pinyin": "gē",
+  "tier": 1
+ },
+ {
+  "id": 166,
+  "char": "起",
+  "pinyin": "qǐ",
+  "tier": 1
+ },
+ {
+  "id": 167,
+  "char": "么",
+  "pinyin": "me",
+  "tier": 1
+ },
+ {
+  "id": 168,
+  "char": "美",
+  "pinyin": "měi",
+  "tier": 1
+ },
+ {
+  "id": 169,
+  "char": "丽",
+  "pinyin": "lì",
+  "tier": 1
+ },
+ {
+  "id": 170,
+  "char": "晚",
+  "pinyin": "wǎn",
+  "tier": 1
+ },
+ {
+  "id": 171,
+  "char": "睡",
+  "pinyin": "shuì",
+  "tier": 1
+ },
+ {
+  "id": 172,
+  "char": "昨",
+  "pinyin": "zuó",
+  "tier": 1
+ },
+ {
+  "id": 173,
+  "char": "今",
+  "pinyin": "jīn",
+  "tier": 1
+ },
+ {
+  "id": 174,
+  "char": "年",
+  "pinyin": "nián",
+  "tier": 1
+ },
+ {
+  "id": 175,
+  "char": "影",
+  "pinyin": "yǐng",
+  "tier": 1
+ },
+ {
+  "id": 176,
+  "char": "前",
+  "pinyin": "qián",
+  "tier": 1
+ },
+ {
+  "id": 177,
+  "char": "后",
+  "pinyin": "hòu",
+  "tier": 1
+ },
+ {
+  "id": 178,
+  "char": "黑",
+  "pinyin": "hēi",
+  "tier": 1
+ },
+ {
+  "id": 179,
+  "char": "狗",
+  "pinyin": "gǒu",
+  "tier": 1
+ },
+ {
+  "id": 180,
+  "char": "左",
+  "pinyin": "zuǒ",
+  "tier": 1
+ },
+ {
+  "id": 181,
+  "char": "右",
+  "pinyin": "yòu",
+  "tier": 1
+ },
+ {
+  "id": 182,
+  "char": "它",
+  "pinyin": "tā",
+  "tier": 1
+ },
+ {
+  "id": 183,
+  "char": "好",
+  "pinyin": "hǎo",
+  "tier": 1
+ },
+ {
+  "id": 184,
+  "char": "朋",
+  "pinyin": "péng",
+  "tier": 1
+ },
+ {
+  "id": 185,
+  "char": "友",
+  "pinyin": "yǒu",
+  "tier": 1
+ },
+ {
+  "id": 186,
+  "char": "比",
+  "pinyin": "bǐ",
+  "tier": 1
+ },
+ {
+  "id": 187,
+  "char": "尾",
+  "pinyin": "wěi",
+  "tier": 1
+ },
+ {
+  "id": 188,
+  "char": "巴",
+  "pinyin": "bā",
+  "tier": 1
+ },
+ {
+  "id": 189,
+  "char": "谁",
+  "pinyin": "shuí",
+  "tier": 1
+ },
+ {
+  "id": 190,
+  "char": "长",
+  "pinyin": "zhǎng",
+  "tier": 1
+ },
+ {
+  "id": 191,
+  "char": "短",
+  "pinyin": "duǎn",
+  "tier": 1
+ },
+ {
+  "id": 192,
+  "char": "把",
+  "pinyin": "bǎ",
+  "tier": 1
+ },
+ {
+  "id": 193,
+  "char": "伞",
+  "pinyin": "sǎn",
+  "tier": 1
+ },
+ {
+  "id": 194,
+  "char": "兔",
+  "pinyin": "tù",
+  "tier": 1
+ },
+ {
+  "id": 195,
+  "char": "公",
+  "pinyin": "gōng",
+  "tier": 1
+ },
+ {
+  "id": 196,
+  "char": "最",
+  "pinyin": "zuì",
+  "tier": 1
+ },
+ {
+  "id": 197,
+  "char": "写",
+  "pinyin": "xiě",
+  "tier": 1
+ },
+ {
+  "id": 198,
+  "char": "点",
+  "pinyin": "diǎn",
+  "tier": 1
+ },
+ {
+  "id": 199,
+  "char": "要",
+  "pinyin": "yào",
+  "tier": 1
+ },
+ {
+  "id": 200,
+  "char": "过",
+  "pinyin": "guò",
+  "tier": 1
+ },
+ {
+  "id": 201,
+  "char": "给",
+  "pinyin": "gěi",
+  "tier": 2
+ },
+ {
+  "id": 202,
+  "char": "当",
+  "pinyin": "dāng",
+  "tier": 2
+ },
+ {
+  "id": 203,
+  "char": "串",
+  "pinyin": "chuàn",
+  "tier": 2
+ },
+ {
+  "id": 204,
+  "char": "们",
+  "pinyin": "men",
+  "tier": 2
+ },
+ {
+  "id": 205,
+  "char": "以",
+  "pinyin": "yǐ",
+  "tier": 2
+ },
+ {
+  "id": 206,
+  "char": "成",
+  "pinyin": "chéng",
+  "tier": 2
+ },
+ {
+  "id": 207,
+  "char": "彩",
+  "pinyin": "cǎi",
+  "tier": 2
+ },
+ {
+  "id": 208,
+  "char": "半",
+  "pinyin": "bàn",
+  "tier": 2
+ },
+ {
+  "id": 209,
+  "char": "空",
+  "pinyin": "kōng",
+  "tier": 2
+ },
+ {
+  "id": 210,
+  "char": "问",
+  "pinyin": "wèn",
+  "tier": 2
+ },
+ {
+  "id": 211,
+  "char": "到",
+  "pinyin": "dào",
+  "tier": 2
+ },
+ {
+  "id": 212,
+  "char": "方",
+  "pinyin": "fāng",
+  "tier": 2
+ },
+ {
+  "id": 213,
+  "char": "没",
+  "pinyin": "méi",
+  "tier": 2
+ },
+ {
+  "id": 214,
+  "char": "更",
+  "pinyin": "gèng",
+  "tier": 2
+ },
+ {
+  "id": 215,
+  "char": "出",
+  "pinyin": "chū",
+  "tier": 2
+ },
+ {
+  "id": 216,
+  "char": "海",
+  "pinyin": "hǎi",
+  "tier": 2
+ },
+ {
+  "id": 217,
+  "char": "真",
+  "pinyin": "zhēn",
+  "tier": 2
+ },
+ {
+  "id": 218,
+  "char": "老",
+  "pinyin": "lǎo",
+  "tier": 2
+ },
+ {
+  "id": 219,
+  "char": "师",
+  "pinyin": "shī",
+  "tier": 2
+ },
+ {
+  "id": 220,
+  "char": "吗",
+  "pinyin": "ma",
+  "tier": 2
+ },
+ {
+  "id": 221,
+  "char": "同",
+  "pinyin": "tóng",
+  "tier": 2
+ },
+ {
+  "id": 222,
+  "char": "什",
+  "pinyin": "shén",
+  "tier": 2
+ },
+ {
+  "id": 223,
+  "char": "变",
+  "pinyin": "biàn",
+  "tier": 2
+ },
+ {
+  "id": 224,
+  "char": "亮",
+  "pinyin": "liàng",
+  "tier": 2
+ },
+ {
+  "id": 225,
+  "char": "时",
+  "pinyin": "shí",
+  "tier": 2
+ },
+ {
+  "id": 226,
+  "char": "候",
+  "pinyin": "hòu",
+  "tier": 2
+ },
+ {
+  "id": 227,
+  "char": "觉",
+  "pinyin": "jué",
+  "tier": 2
+ },
+ {
+  "id": 228,
+  "char": "得",
+  "pinyin": "dé",
+  "tier": 2
+ },
+ {
+  "id": 229,
+  "char": "自",
+  "pinyin": "zì",
+  "tier": 2
+ },
+ {
+  "id": 230,
+  "char": "己",
+  "pinyin": "jǐ",
+  "tier": 2
+ },
+ {
+  "id": 231,
+  "char": "很",
+  "pinyin": "hěn",
+  "tier": 2
+ },
+ {
+  "id": 232,
+  "char": "穿",
+  "pinyin": "chuān",
+  "tier": 2
+ },
+ {
+  "id": 233,
+  "char": "衣",
+  "pinyin": "yī",
+  "tier": 2
+ },
+ {
+  "id": 234,
+  "char": "服",
+  "pinyin": "fú",
+  "tier": 2
+ },
+ {
+  "id": 235,
+  "char": "快",
+  "pinyin": "kuài",
+  "tier": 2
+ },
+ {
+  "id": 236,
+  "char": "蓝",
+  "pinyin": "lán",
+  "tier": 2
+ },
+ {
+  "id": 237,
+  "char": "又",
+  "pinyin": "yòu",
+  "tier": 2
+ },
+ {
+  "id": 238,
+  "char": "笑",
+  "pinyin": "xiào",
+  "tier": 2
+ },
+ {
+  "id": 239,
+  "char": "着",
+  "pinyin": "zhe",
+  "tier": 2
+ },
+ {
+  "id": 240,
+  "char": "向",
+  "pinyin": "xiàng",
+  "tier": 2
+ },
+ {
+  "id": 241,
+  "char": "和",
+  "pinyin": "hé",
+  "tier": 2
+ },
+ {
+  "id": 242,
+  "char": "贝",
+  "pinyin": "bèi",
+  "tier": 2
+ },
+ {
+  "id": 243,
+  "char": "娃",
+  "pinyin": "wá",
+  "tier": 2
+ },
+ {
+  "id": 244,
+  "char": "挂",
+  "pinyin": "guà",
+  "tier": 2
+ },
+ {
+  "id": 245,
+  "char": "活",
+  "pinyin": "huó",
+  "tier": 2
+ },
+ {
+  "id": 246,
+  "char": "金",
+  "pinyin": "jīn",
+  "tier": 2
+ },
+ {
+  "id": 247,
+  "char": "姐",
+  "pinyin": "jiě",
+  "tier": 2
+ },
+ {
+  "id": 248,
+  "char": "哥",
+  "pinyin": "gē",
+  "tier": 2
+ },
+ {
+  "id": 249,
+  "char": "弟",
+  "pinyin": "dì",
+  "tier": 2
+ },
+ {
+  "id": 250,
+  "char": "叔",
+  "pinyin": "shū",
+  "tier": 2
+ },
+ {
+  "id": 251,
+  "char": "爷",
+  "pinyin": "yé",
+  "tier": 2
+ },
+ {
+  "id": 252,
+  "char": "群",
+  "pinyin": "qún",
+  "tier": 2
+ },
+ {
+  "id": 253,
+  "char": "竹",
+  "pinyin": "zhú",
+  "tier": 2
+ },
+ {
+  "id": 254,
+  "char": "牙",
+  "pinyin": "yá",
+  "tier": 2
+ },
+ {
+  "id": 255,
+  "char": "用",
+  "pinyin": "yòng",
+  "tier": 2
+ },
+ {
+  "id": 256,
+  "char": "几",
+  "pinyin": "jǐ",
+  "tier": 2
+ },
+ {
+  "id": 257,
+  "char": "步",
+  "pinyin": "bù",
+  "tier": 2
+ },
+ {
+  "id": 258,
+  "char": "为",
+  "pinyin": "wèi",
+  "tier": 2
+ },
+ {
+  "id": 259,
+  "char": "参",
+  "pinyin": "cān",
+  "tier": 2
+ },
+ {
+  "id": 260,
+  "char": "加",
+  "pinyin": "jiā",
+  "tier": 2
+ },
+ {
+  "id": 261,
+  "char": "洞",
+  "pinyin": "dòng",
+  "tier": 2
+ },
+ {
+  "id": 262,
+  "char": "乌",
+  "pinyin": "wū",
+  "tier": 2
+ },
+ {
+  "id": 263,
+  "char": "鸦",
+  "pinyin": "yā",
+  "tier": 2
+ },
+ {
+  "id": 264,
+  "char": "处",
+  "pinyin": "chù",
+  "tier": 2
+ },
+ {
+  "id": 265,
+  "char": "找",
+  "pinyin": "zhǎo",
+  "tier": 2
+ },
+ {
+  "id": 266,
+  "char": "办",
+  "pinyin": "bàn",
+  "tier": 2
+ },
+ {
+  "id": 267,
+  "char": "法",
+  "pinyin": "fǎ",
+  "tier": 2
+ },
+ {
+  "id": 268,
+  "char": "许",
+  "pinyin": "xǔ",
+  "tier": 2
+ },
+ {
+  "id": 269,
+  "char": "放",
+  "pinyin": "fàng",
+  "tier": 2
+ },
+ {
+  "id": 270,
+  "char": "进",
+  "pinyin": "jìn",
+  "tier": 2
+ },
+ {
+  "id": 271,
+  "char": "高",
+  "pinyin": "gāo",
+  "tier": 2
+ },
+ {
+  "id": 272,
+  "char": "住",
+  "pinyin": "zhù",
+  "tier": 2
+ },
+ {
+  "id": 273,
+  "char": "玩",
+  "pinyin": "wán",
+  "tier": 2
+ },
+ {
+  "id": 274,
+  "char": "吧",
+  "pinyin": "ba",
+  "tier": 2
+ },
+ {
+  "id": 275,
+  "char": "发",
+  "pinyin": "fā",
+  "tier": 2
+ },
+ {
+  "id": 276,
+  "char": "芽",
+  "pinyin": "yá",
+  "tier": 2
+ },
+ {
+  "id": 277,
+  "char": "爬",
+  "pinyin": "pá",
+  "tier": 2
+ },
+ {
+  "id": 278,
+  "char": "呀",
+  "pinyin": "ya",
+  "tier": 2
+ },
+ {
+  "id": 279,
+  "char": "久",
+  "pinyin": "jiǔ",
+  "tier": 2
+ },
+ {
+  "id": 280,
+  "char": "回",
+  "pinyin": "huí",
+  "tier": 2
+ },
+ {
+  "id": 281,
+  "char": "全",
+  "pinyin": "quán",
+  "tier": 2
+ },
+ {
+  "id": 282,
+  "char": "工",
+  "pinyin": "gōng",
+  "tier": 2
+ },
+ {
+  "id": 283,
+  "char": "厂",
+  "pinyin": "chǎng",
+  "tier": 2
+ },
+ {
+  "id": 284,
+  "char": "医",
+  "pinyin": "yī",
+  "tier": 2
+ },
+ {
+  "id": 285,
+  "char": "院",
+  "pinyin": "yuàn",
+  "tier": 2
+ },
+ {
+  "id": 286,
+  "char": "生",
+  "pinyin": "shēng",
+  "tier": 2
+ },
+ {
+  "id": 287,
+  "char": "霜",
+  "pinyin": "shuāng",
+  "tier": 2
+ },
+ {
+  "id": 288,
+  "char": "吹",
+  "pinyin": "chuī",
+  "tier": 2
+ },
+ {
+  "id": 289,
+  "char": "落",
+  "pinyin": "luò",
+  "tier": 2
+ },
+ {
+  "id": 290,
+  "char": "降",
+  "pinyin": "jiàng",
+  "tier": 2
+ },
+ {
+  "id": 291,
+  "char": "飘",
+  "pinyin": "piāo",
+  "tier": 2
+ },
+ {
+  "id": 292,
+  "char": "游",
+  "pinyin": "yóu",
+  "tier": 2
+ },
+ {
+  "id": 293,
+  "char": "池",
+  "pinyin": "chí",
+  "tier": 2
+ },
+ {
+  "id": 294,
+  "char": "入",
+  "pinyin": "rù",
+  "tier": 2
+ },
+ {
+  "id": 295,
+  "char": "姓",
+  "pinyin": "xìng",
+  "tier": 2
+ },
+ {
+  "id": 296,
+  "char": "氏",
+  "pinyin": "shì",
+  "tier": 2
+ },
+ {
+  "id": 297,
+  "char": "李",
+  "pinyin": "lǐ",
+  "tier": 2
+ },
+ {
+  "id": 298,
+  "char": "张",
+  "pinyin": "zhāng",
+  "tier": 2
+ },
+ {
+  "id": 299,
+  "char": "古",
+  "pinyin": "gǔ",
+  "tier": 2
+ },
+ {
+  "id": 300,
+  "char": "吴",
+  "pinyin": "wú",
+  "tier": 2
+ },
+ {
+  "id": 301,
+  "char": "赵",
+  "pinyin": "zhào",
+  "tier": 2
+ },
+ {
+  "id": 302,
+  "char": "钱",
+  "pinyin": "qián",
+  "tier": 2
+ },
+ {
+  "id": 303,
+  "char": "孙",
+  "pinyin": "sūn",
+  "tier": 2
+ },
+ {
+  "id": 304,
+  "char": "周",
+  "pinyin": "zhōu",
+  "tier": 2
+ },
+ {
+  "id": 305,
+  "char": "王",
+  "pinyin": "wáng",
+  "tier": 2
+ },
+ {
+  "id": 306,
+  "char": "官",
+  "pinyin": "guān",
+  "tier": 2
+ },
+ {
+  "id": 307,
+  "char": "清",
+  "pinyin": "qīng",
+  "tier": 2
+ },
+ {
+  "id": 308,
+  "char": "晴",
+  "pinyin": "qíng",
+  "tier": 2
+ },
+ {
+  "id": 309,
+  "char": "眼",
+  "pinyin": "yǎn",
+  "tier": 2
+ },
+ {
+  "id": 310,
+  "char": "睛",
+  "pinyin": "jīng",
+  "tier": 2
+ },
+ {
+  "id": 311,
+  "char": "保",
+  "pinyin": "bǎo",
+  "tier": 2
+ },
+ {
+  "id": 312,
+  "char": "护",
+  "pinyin": "hù",
+  "tier": 2
+ },
+ {
+  "id": 313,
+  "char": "害",
+  "pinyin": "hài",
+  "tier": 2
+ },
+ {
+  "id": 314,
+  "char": "事",
+  "pinyin": "shì",
+  "tier": 2
+ },
+ {
+  "id": 315,
+  "char": "情",
+  "pinyin": "qíng",
+  "tier": 2
+ },
+ {
+  "id": 316,
+  "char": "请",
+  "pinyin": "qǐng",
+  "tier": 2
+ },
+ {
+  "id": 317,
+  "char": "让",
+  "pinyin": "ràng",
+  "tier": 2
+ },
+ {
+  "id": 318,
+  "char": "病",
+  "pinyin": "bìng",
+  "tier": 2
+ },
+ {
+  "id": 319,
+  "char": "相",
+  "pinyin": "xiāng",
+  "tier": 2
+ },
+ {
+  "id": 320,
+  "char": "遇",
+  "pinyin": "yù",
+  "tier": 2
+ },
+ {
+  "id": 321,
+  "char": "喜",
+  "pinyin": "xǐ",
+  "tier": 2
+ },
+ {
+  "id": 322,
+  "char": "欢",
+  "pinyin": "huān",
+  "tier": 2
+ },
+ {
+  "id": 323,
+  "char": "怕",
+  "pinyin": "pà",
+  "tier": 2
+ },
+ {
+  "id": 324,
+  "char": "言",
+  "pinyin": "yán",
+  "tier": 2
+ },
+ {
+  "id": 325,
+  "char": "互",
+  "pinyin": "hù",
+  "tier": 2
+ },
+ {
+  "id": 326,
+  "char": "令",
+  "pinyin": "lìng",
+  "tier": 2
+ },
+ {
+  "id": 327,
+  "char": "动",
+  "pinyin": "dòng",
+  "tier": 2
+ },
+ {
+  "id": 328,
+  "char": "万",
+  "pinyin": "wàn",
+  "tier": 2
+ },
+ {
+  "id": 329,
+  "char": "纯",
+  "pinyin": "chún",
+  "tier": 2
+ },
+ {
+  "id": 330,
+  "char": "净",
+  "pinyin": "jìng",
+  "tier": 2
+ },
+ {
+  "id": 331,
+  "char": "阴",
+  "pinyin": "yīn",
+  "tier": 2
+ },
+ {
+  "id": 332,
+  "char": "雷",
+  "pinyin": "léi",
+  "tier": 2
+ },
+ {
+  "id": 333,
+  "char": "电",
+  "pinyin": "diàn",
+  "tier": 2
+ },
+ {
+  "id": 334,
+  "char": "阵",
+  "pinyin": "zhèn",
+  "tier": 2
+ },
+ {
+  "id": 335,
+  "char": "冰",
+  "pinyin": "bīng",
+  "tier": 2
+ },
+ {
+  "id": 336,
+  "char": "冻",
+  "pinyin": "dòng",
+  "tier": 2
+ },
+ {
+  "id": 337,
+  "char": "夹",
+  "pinyin": "jiā",
+  "tier": 2
+ },
+ {
+  "id": 338,
+  "char": "吃",
+  "pinyin": "chī",
+  "tier": 2
+ },
+ {
+  "id": 339,
+  "char": "忘",
+  "pinyin": "wàng",
+  "tier": 2
+ },
+ {
+  "id": 340,
+  "char": "井",
+  "pinyin": "jǐng",
+  "tier": 2
+ },
+ {
+  "id": 341,
+  "char": "村",
+  "pinyin": "cūn",
+  "tier": 2
+ },
+ {
+  "id": 342,
+  "char": "叫",
+  "pinyin": "jiào",
+  "tier": 2
+ },
+ {
+  "id": 343,
+  "char": "毛",
+  "pinyin": "máo",
+  "tier": 2
+ },
+ {
+  "id": 344,
+  "char": "主",
+  "pinyin": "zhǔ",
+  "tier": 2
+ },
+ {
+  "id": 345,
+  "char": "席",
+  "pinyin": "xí",
+  "tier": 2
+ },
+ {
+  "id": 346,
+  "char": "乡",
+  "pinyin": "xiāng",
+  "tier": 2
+ },
+ {
+  "id": 347,
+  "char": "亲",
+  "pinyin": "qīn",
+  "tier": 2
+ },
+ {
+  "id": 348,
+  "char": "战",
+  "pinyin": "zhàn",
+  "tier": 2
+ },
+ {
+  "id": 349,
+  "char": "士",
+  "pinyin": "shì",
+  "tier": 2
+ },
+ {
+  "id": 350,
+  "char": "想",
+  "pinyin": "xiǎng",
+  "tier": 2
+ },
+ {
+  "id": 351,
+  "char": "念",
+  "pinyin": "niàn",
+  "tier": 2
+ },
+ {
+  "id": 352,
+  "char": "告",
+  "pinyin": "gào",
+  "tier": 2
+ },
+ {
+  "id": 353,
+  "char": "诉",
+  "pinyin": "sù",
+  "tier": 2
+ },
+ {
+  "id": 354,
+  "char": "京",
+  "pinyin": "jīng",
+  "tier": 2
+ },
+ {
+  "id": 355,
+  "char": "广",
+  "pinyin": "guǎng",
+  "tier": 2
+ },
+ {
+  "id": 356,
+  "char": "座",
+  "pinyin": "zuò",
+  "tier": 2
+ },
+ {
+  "id": 357,
+  "char": "场",
+  "pinyin": "chǎng",
+  "tier": 2
+ },
+ {
+  "id": 358,
+  "char": "非",
+  "pinyin": "fēi",
+  "tier": 2
+ },
+ {
+  "id": 359,
+  "char": "常",
+  "pinyin": "cháng",
+  "tier": 2
+ },
+ {
+  "id": 360,
+  "char": "壮",
+  "pinyin": "zhuàng",
+  "tier": 2
+ },
+ {
+  "id": 361,
+  "char": "观",
+  "pinyin": "guān",
+  "tier": 2
+ },
+ {
+  "id": 362,
+  "char": "思",
+  "pinyin": "sī",
+  "tier": 2
+ },
+ {
+  "id": 363,
+  "char": "床",
+  "pinyin": "chuáng",
+  "tier": 2
+ },
+ {
+  "id": 364,
+  "char": "疑",
+  "pinyin": "yí",
+  "tier": 2
+ },
+ {
+  "id": 365,
+  "char": "举",
+  "pinyin": "jǔ",
+  "tier": 2
+ },
+ {
+  "id": 366,
+  "char": "望",
+  "pinyin": "wàng",
+  "tier": 2
+ },
+ {
+  "id": 367,
+  "char": "低",
+  "pinyin": "dī",
+  "tier": 2
+ },
+ {
+  "id": 368,
+  "char": "胆",
+  "pinyin": "dǎn",
+  "tier": 2
+ },
+ {
+  "id": 369,
+  "char": "敢",
+  "pinyin": "gǎn",
+  "tier": 2
+ },
+ {
+  "id": 370,
+  "char": "勇",
+  "pinyin": "yǒng",
+  "tier": 2
+ },
+ {
+  "id": 371,
+  "char": "讲",
+  "pinyin": "jiǎng",
+  "tier": 2
+ },
+ {
+  "id": 372,
+  "char": "窗",
+  "pinyin": "chuāng",
+  "tier": 2
+ },
+ {
+  "id": 373,
+  "char": "乱",
+  "pinyin": "luàn",
+  "tier": 2
+ },
+ {
+  "id": 374,
+  "char": "拉",
+  "pinyin": "lā",
+  "tier": 2
+ },
+ {
+  "id": 375,
+  "char": "样",
+  "pinyin": "yàng",
+  "tier": 2
+ },
+ {
+  "id": 376,
+  "char": "再",
+  "pinyin": "zài",
+  "tier": 2
+ },
+ {
+  "id": 377,
+  "char": "端",
+  "pinyin": "duān",
+  "tier": 2
+ },
+ {
+  "id": 378,
+  "char": "粽",
+  "pinyin": "zòng",
+  "tier": 2
+ },
+ {
+  "id": 379,
+  "char": "节",
+  "pinyin": "jié",
+  "tier": 2
+ },
+ {
+  "id": 380,
+  "char": "总",
+  "pinyin": "zǒng",
+  "tier": 2
+ },
+ {
+  "id": 381,
+  "char": "煮",
+  "pinyin": "zhǔ",
+  "tier": 2
+ },
+ {
+  "id": 382,
+  "char": "盼",
+  "pinyin": "pàn",
+  "tier": 2
+ },
+ {
+  "id": 383,
+  "char": "米",
+  "pinyin": "mǐ",
+  "tier": 2
+ },
+ {
+  "id": 384,
+  "char": "枣",
+  "pinyin": "zǎo",
+  "tier": 2
+ },
+ {
+  "id": 385,
+  "char": "甜",
+  "pinyin": "tián",
+  "tier": 2
+ },
+ {
+  "id": 386,
+  "char": "分",
+  "pinyin": "fēn",
+  "tier": 2
+ },
+ {
+  "id": 387,
+  "char": "鲜",
+  "pinyin": "xiān",
+  "tier": 2
+ },
+ {
+  "id": 388,
+  "char": "肉",
+  "pinyin": "ròu",
+  "tier": 2
+ },
+ {
+  "id": 389,
+  "char": "册",
+  "pinyin": "cè",
+  "tier": 2
+ },
+ {
+  "id": 390,
+  "char": "支",
+  "pinyin": "zhī",
+  "tier": 2
+ },
+ {
+  "id": 391,
+  "char": "视",
+  "pinyin": "shì",
+  "tier": 2
+ },
+ {
+  "id": 392,
+  "char": "部",
+  "pinyin": "bù",
+  "tier": 2
+ },
+ {
+  "id": 393,
+  "char": "机",
+  "pinyin": "jī",
+  "tier": 2
+ },
+ {
+  "id": 394,
+  "char": "裤",
+  "pinyin": "kù",
+  "tier": 2
+ },
+ {
+  "id": 395,
+  "char": "被",
+  "pinyin": "bèi",
+  "tier": 2
+ },
+ {
+  "id": 396,
+  "char": "物",
+  "pinyin": "wù",
+  "tier": 2
+ },
+ {
+  "id": 397,
+  "char": "捉",
+  "pinyin": "zhuō",
+  "tier": 2
+ },
+ {
+  "id": 398,
+  "char": "迷",
+  "pinyin": "mí",
+  "tier": 2
+ },
+ {
+  "id": 399,
+  "char": "藏",
+  "pinyin": "cáng",
+  "tier": 2
+ },
+ {
+  "id": 400,
+  "char": "造",
+  "pinyin": "zào",
+  "tier": 2
+ },
+ {
+  "id": 401,
+  "char": "蚂",
+  "pinyin": "mǎ",
+  "tier": 3
+ },
+ {
+  "id": 402,
+  "char": "蚁",
+  "pinyin": "yǐ",
+  "tier": 3
+ },
+ {
+  "id": 403,
+  "char": "运",
+  "pinyin": "yùn",
+  "tier": 3
+ },
+ {
+  "id": 404,
+  "char": "食",
+  "pinyin": "shí",
+  "tier": 3
+ },
+ {
+  "id": 405,
+  "char": "粮",
+  "pinyin": "liáng",
+  "tier": 3
+ },
+ {
+  "id": 406,
+  "char": "房",
+  "pinyin": "fáng",
+  "tier": 3
+ },
+ {
+  "id": 407,
+  "char": "结",
+  "pinyin": "jié",
+  "tier": 3
+ },
+ {
+  "id": 408,
+  "char": "网",
+  "pinyin": "wǎng",
+  "tier": 3
+ },
+ {
+  "id": 409,
+  "char": "圆",
+  "pinyin": "yuán",
+  "tier": 3
+ },
+ {
+  "id": 410,
+  "char": "严",
+  "pinyin": "yán",
+  "tier": 3
+ },
+ {
+  "id": 411,
+  "char": "寒",
+  "pinyin": "hán",
+  "tier": 3
+ },
+ {
+  "id": 412,
+  "char": "酷",
+  "pinyin": "kù",
+  "tier": 3
+ },
+ {
+  "id": 413,
+  "char": "暑",
+  "pinyin": "shǔ",
+  "tier": 3
+ },
+ {
+  "id": 414,
+  "char": "暖",
+  "pinyin": "nuǎn",
+  "tier": 3
+ },
+ {
+  "id": 415,
+  "char": "晨",
+  "pinyin": "chén",
+  "tier": 3
+ },
+ {
+  "id": 416,
+  "char": "细",
+  "pinyin": "xì",
+  "tier": 3
+ },
+ {
+  "id": 417,
+  "char": "朝",
+  "pinyin": "cháo",
+  "tier": 3
+ },
+ {
+  "id": 418,
+  "char": "霞",
+  "pinyin": "xiá",
+  "tier": 3
+ },
+ {
+  "id": 419,
+  "char": "夕",
+  "pinyin": "xī",
+  "tier": 3
+ },
+ {
+  "id": 420,
+  "char": "杨",
+  "pinyin": "yáng",
+  "tier": 3
+ },
+ {
+  "id": 421,
+  "char": "香",
+  "pinyin": "xiāng",
+  "tier": 3
+ },
+ {
+  "id": 422,
+  "char": "操",
+  "pinyin": "cāo",
+  "tier": 3
+ },
+ {
+  "id": 423,
+  "char": "拔",
+  "pinyin": "bá",
+  "tier": 3
+ },
+ {
+  "id": 424,
+  "char": "拍",
+  "pinyin": "pāi",
+  "tier": 3
+ },
+ {
+  "id": 425,
+  "char": "跑",
+  "pinyin": "pǎo",
+  "tier": 3
+ },
+ {
+  "id": 426,
+  "char": "踢",
+  "pinyin": "tī",
+  "tier": 3
+ },
+ {
+  "id": 427,
+  "char": "玲",
+  "pinyin": "líng",
+  "tier": 3
+ },
+ {
+  "id": 428,
+  "char": "闹",
+  "pinyin": "nào",
+  "tier": 3
+ },
+ {
+  "id": 429,
+  "char": "丢",
+  "pinyin": "diū",
+  "tier": 3
+ },
+ {
+  "id": 430,
+  "char": "沙",
+  "pinyin": "shā",
+  "tier": 3
+ },
+ {
+  "id": 431,
+  "char": "身",
+  "pinyin": "shēn",
+  "tier": 3
+ },
+ {
+  "id": 432,
+  "char": "体",
+  "pinyin": "tǐ",
+  "tier": 3
+ },
+ {
+  "id": 433,
+  "char": "之",
+  "pinyin": "zhī",
+  "tier": 3
+ },
+ {
+  "id": 434,
+  "char": "初",
+  "pinyin": "chū",
+  "tier": 3
+ },
+ {
+  "id": 435,
+  "char": "习",
+  "pinyin": "xí",
+  "tier": 3
+ },
+ {
+  "id": 436,
+  "char": "教",
+  "pinyin": "jiào",
+  "tier": 3
+ },
+ {
+  "id": 437,
+  "char": "道",
+  "pinyin": "dào",
+  "tier": 3
+ },
+ {
+  "id": 438,
+  "char": "专",
+  "pinyin": "zhuān",
+  "tier": 3
+ },
+ {
+  "id": 439,
+  "char": "幼",
+  "pinyin": "yòu",
+  "tier": 3
+ },
+ {
+  "id": 440,
+  "char": "玉",
+  "pinyin": "yù",
+  "tier": 3
+ },
+ {
+  "id": 441,
+  "char": "知",
+  "pinyin": "zhī",
+  "tier": 3
+ },
+ {
+  "id": 442,
+  "char": "义",
+  "pinyin": "yì",
+  "tier": 3
+ },
+ {
+  "id": 443,
+  "char": "饭",
+  "pinyin": "fàn",
+  "tier": 3
+ },
+ {
+  "id": 444,
+  "char": "饱",
+  "pinyin": "bǎo",
+  "tier": 3
+ },
+ {
+  "id": 445,
+  "char": "茶",
+  "pinyin": "chá",
+  "tier": 3
+ },
+ {
+  "id": 446,
+  "char": "泡",
+  "pinyin": "pào",
+  "tier": 3
+ },
+ {
+  "id": 447,
+  "char": "轻",
+  "pinyin": "qīng",
+  "tier": 3
+ },
+ {
+  "id": 448,
+  "char": "袍",
+  "pinyin": "páo",
+  "tier": 3
+ },
+ {
+  "id": 449,
+  "char": "鞭",
+  "pinyin": "biān",
+  "tier": 3
+ },
+ {
+  "id": 450,
+  "char": "炮",
+  "pinyin": "pào",
+  "tier": 3
+ },
+ {
+  "id": 451,
+  "char": "诗",
+  "pinyin": "shī",
+  "tier": 3
+ },
+ {
+  "id": 452,
+  "char": "首",
+  "pinyin": "shǒu",
+  "tier": 3
+ },
+ {
+  "id": 453,
+  "char": "偷",
+  "pinyin": "tōu",
+  "tier": 3
+ },
+ {
+  "id": 454,
+  "char": "浮",
+  "pinyin": "fú",
+  "tier": 3
+ },
+ {
+  "id": 455,
+  "char": "萍",
+  "pinyin": "píng",
+  "tier": 3
+ },
+ {
+  "id": 456,
+  "char": "泉",
+  "pinyin": "quán",
+  "tier": 3
+ },
+ {
+  "id": 457,
+  "char": "惜",
+  "pinyin": "xī",
+  "tier": 3
+ },
+ {
+  "id": 458,
+  "char": "照",
+  "pinyin": "zhào",
+  "tier": 3
+ },
+ {
+  "id": 459,
+  "char": "柔",
+  "pinyin": "róu",
+  "tier": 3
+ },
+ {
+  "id": 460,
+  "char": "荷",
+  "pinyin": "hé",
+  "tier": 3
+ },
+ {
+  "id": 461,
+  "char": "露",
+  "pinyin": "lù",
+  "tier": 3
+ },
+ {
+  "id": 462,
+  "char": "角",
+  "pinyin": "jiǎo",
+  "tier": 3
+ },
+ {
+  "id": 463,
+  "char": "浪",
+  "pinyin": "làng",
+  "tier": 3
+ },
+ {
+  "id": 464,
+  "char": "迈",
+  "pinyin": "mài",
+  "tier": 3
+ },
+ {
+  "id": 465,
+  "char": "悄",
+  "pinyin": "qiāo",
+  "tier": 3
+ },
+ {
+  "id": 466,
+  "char": "泪",
+  "pinyin": "lèi",
+  "tier": 3
+ },
+ {
+  "id": 467,
+  "char": "次",
+  "pinyin": "cì",
+  "tier": 3
+ },
+ {
+  "id": 468,
+  "char": "壳",
+  "pinyin": "ké",
+  "tier": 3
+ },
+ {
+  "id": 469,
+  "char": "虾",
+  "pinyin": "xiā",
+  "tier": 3
+ },
+ {
+  "id": 470,
+  "char": "装",
+  "pinyin": "zhuāng",
+  "tier": 3
+ },
+ {
+  "id": 471,
+  "char": "像",
+  "pinyin": "xiàng",
+  "tier": 3
+ },
+ {
+  "id": 472,
+  "char": "淘",
+  "pinyin": "táo",
+  "tier": 3
+ },
+ {
+  "id": 473,
+  "char": "珠",
+  "pinyin": "zhū",
+  "tier": 3
+ },
+ {
+  "id": 474,
+  "char": "摇",
+  "pinyin": "yáo",
+  "tier": 3
+ },
+ {
+  "id": 475,
+  "char": "篮",
+  "pinyin": "lán",
+  "tier": 3
+ },
+ {
+  "id": 476,
+  "char": "晶",
+  "pinyin": "jīng",
+  "tier": 3
+ },
+ {
+  "id": 477,
+  "char": "停",
+  "pinyin": "tíng",
+  "tier": 3
+ },
+ {
+  "id": 478,
+  "char": "坪",
+  "pinyin": "píng",
+  "tier": 3
+ },
+ {
+  "id": 479,
+  "char": "展",
+  "pinyin": "zhǎn",
+  "tier": 3
+ },
+ {
+  "id": 480,
+  "char": "透",
+  "pinyin": "tòu",
+  "tier": 3
+ },
+ {
+  "id": 481,
+  "char": "翅",
+  "pinyin": "chì",
+  "tier": 3
+ },
+ {
+  "id": 482,
+  "char": "膀",
+  "pinyin": "bǎng",
+  "tier": 3
+ },
+ {
+  "id": 483,
+  "char": "朵",
+  "pinyin": "duǒ",
+  "tier": 3
+ },
+ {
+  "id": 484,
+  "char": "腰",
+  "pinyin": "yāo",
+  "tier": 3
+ },
+ {
+  "id": 485,
+  "char": "沉",
+  "pinyin": "chén",
+  "tier": 3
+ },
+ {
+  "id": 486,
+  "char": "忙",
+  "pinyin": "máng",
+  "tier": 3
+ },
+ {
+  "id": 487,
+  "char": "呢",
+  "pinyin": "ne",
+  "tier": 3
+ },
+ {
+  "id": 488,
+  "char": "面",
+  "pinyin": "miàn",
+  "tier": 3
+ },
+ {
+  "id": 489,
+  "char": "闷",
+  "pinyin": "mèn",
+  "tier": 3
+ },
+ {
+  "id": 490,
+  "char": "消",
+  "pinyin": "xiāo",
+  "tier": 3
+ },
+ {
+  "id": 491,
+  "char": "息",
+  "pinyin": "xī",
+  "tier": 3
+ },
+ {
+  "id": 492,
+  "char": "棍",
+  "pinyin": "gùn",
+  "tier": 3
+ },
+ {
+  "id": 493,
+  "char": "豆",
+  "pinyin": "dòu",
+  "tier": 3
+ },
+ {
+  "id": 494,
+  "char": "汤",
+  "pinyin": "tāng",
+  "tier": 3
+ },
+ {
+  "id": 495,
+  "char": "蚊",
+  "pinyin": "wén",
+  "tier": 3
+ },
+ {
+  "id": 496,
+  "char": "扇",
+  "pinyin": "shàn",
+  "tier": 3
+ },
+ {
+  "id": 497,
+  "char": "椅",
+  "pinyin": "yǐ",
+  "tier": 3
+ },
+ {
+  "id": 498,
+  "char": "牵",
+  "pinyin": "qiān",
+  "tier": 3
+ },
+ {
+  "id": 499,
+  "char": "织",
+  "pinyin": "zhī",
+  "tier": 3
+ },
+ {
+  "id": 500,
+  "char": "斗",
+  "pinyin": "dòu",
+  "tier": 3
+ },
+ {
+  "id": 501,
+  "char": "具",
+  "pinyin": "jù",
+  "tier": 3
+ },
+ {
+  "id": 502,
+  "char": "铅",
+  "pinyin": "qiān",
+  "tier": 3
+ },
+ {
+  "id": 503,
+  "char": "新",
+  "pinyin": "xīn",
+  "tier": 3
+ },
+ {
+  "id": 504,
+  "char": "平",
+  "pinyin": "píng",
+  "tier": 3
+ },
+ {
+  "id": 505,
+  "char": "盒",
+  "pinyin": "hé",
+  "tier": 3
+ },
+ {
+  "id": 506,
+  "char": "些",
+  "pinyin": "xiē",
+  "tier": 3
+ },
+ {
+  "id": 507,
+  "char": "此",
+  "pinyin": "cǐ",
+  "tier": 3
+ },
+ {
+  "id": 508,
+  "char": "仔",
+  "pinyin": "zǎi",
+  "tier": 3
+ },
+ {
+  "id": 509,
+  "char": "检",
+  "pinyin": "jiǎn",
+  "tier": 3
+ },
+ {
+  "id": 510,
+  "char": "查",
+  "pinyin": "chá",
+  "tier": 3
+ },
+ {
+  "id": 511,
+  "char": "哪",
+  "pinyin": "nǎ",
+  "tier": 3
+ },
+ {
+  "id": 512,
+  "char": "所",
+  "pinyin": "suǒ",
+  "tier": 3
+ },
+ {
+  "id": 513,
+  "char": "钟",
+  "pinyin": "zhōng",
+  "tier": 3
+ },
+ {
+  "id": 514,
+  "char": "元",
+  "pinyin": "yuán",
+  "tier": 3
+ },
+ {
+  "id": 515,
+  "char": "洗",
+  "pinyin": "xǐ",
+  "tier": 3
+ },
+ {
+  "id": 516,
+  "char": "共",
+  "pinyin": "gòng",
+  "tier": 3
+ },
+ {
+  "id": 517,
+  "char": "已",
+  "pinyin": "yǐ",
+  "tier": 3
+ },
+ {
+  "id": 518,
+  "char": "经",
+  "pinyin": "jīng",
+  "tier": 3
+ },
+ {
+  "id": 519,
+  "char": "连",
+  "pinyin": "lián",
+  "tier": 3
+ },
+ {
+  "id": 520,
+  "char": "迟",
+  "pinyin": "chí",
+  "tier": 3
+ },
+ {
+  "id": 521,
+  "char": "虎",
+  "pinyin": "hǔ",
+  "tier": 3
+ },
+ {
+  "id": 522,
+  "char": "熊",
+  "pinyin": "xióng",
+  "tier": 3
+ },
+ {
+  "id": 523,
+  "char": "注",
+  "pinyin": "zhù",
+  "tier": 3
+ },
+ {
+  "id": 524,
+  "char": "意",
+  "pinyin": "yì",
+  "tier": 3
+ },
+ {
+  "id": 525,
+  "char": "遍",
+  "pinyin": "biàn",
+  "tier": 3
+ },
+ {
+  "id": 526,
+  "char": "百",
+  "pinyin": "bǎi",
+  "tier": 3
+ },
+ {
+  "id": 527,
+  "char": "舌",
+  "pinyin": "shé",
+  "tier": 3
+ },
+ {
+  "id": 528,
+  "char": "鬼",
+  "pinyin": "guǐ",
+  "tier": 3
+ },
+ {
+  "id": 529,
+  "char": "脸",
+  "pinyin": "liǎn",
+  "tier": 3
+ },
+ {
+  "id": 530,
+  "char": "准",
+  "pinyin": "zhǔn",
+  "tier": 3
+ },
+ {
+  "id": 531,
+  "char": "第",
+  "pinyin": "dì",
+  "tier": 3
+ },
+ {
+  "id": 532,
+  "char": "猴",
+  "pinyin": "hóu",
+  "tier": 3
+ },
+ {
+  "id": 533,
+  "char": "捧",
+  "pinyin": "pěng",
+  "tier": 3
+ },
+ {
+  "id": 534,
+  "char": "扔",
+  "pinyin": "rēng",
+  "tier": 3
+ },
+ {
+  "id": 535,
+  "char": "摘",
+  "pinyin": "zhāi",
+  "tier": 3
+ },
+ {
+  "id": 536,
+  "char": "掰",
+  "pinyin": "bāi",
+  "tier": 3
+ },
+ {
+  "id": 537,
+  "char": "扛",
+  "pinyin": "káng",
+  "tier": 3
+ },
+ {
+  "id": 538,
+  "char": "满",
+  "pinyin": "mǎn",
+  "tier": 3
+ },
+ {
+  "id": 539,
+  "char": "瓜",
+  "pinyin": "guā",
+  "tier": 3
+ },
+ {
+  "id": 540,
+  "char": "抱",
+  "pinyin": "bào",
+  "tier": 3
+ },
+ {
+  "id": 541,
+  "char": "蹦",
+  "pinyin": "bèng",
+  "tier": 3
+ },
+ {
+  "id": 542,
+  "char": "棉",
+  "pinyin": "mián",
+  "tier": 3
+ },
+ {
+  "id": 543,
+  "char": "娘",
+  "pinyin": "niáng",
+  "tier": 3
+ },
+ {
+  "id": 544,
+  "char": "治",
+  "pinyin": "zhì",
+  "tier": 3
+ },
+ {
+  "id": 545,
+  "char": "燕",
+  "pinyin": "yàn",
+  "tier": 3
+ },
+ {
+  "id": 546,
+  "char": "别",
+  "pinyin": "bié",
+  "tier": 3
+ },
+ {
+  "id": 547,
+  "char": "干",
+  "pinyin": "gàn",
+  "tier": 3
+ },
+ {
+  "id": 548,
+  "char": "然",
+  "pinyin": "rán",
+  "tier": 3
+ },
+ {
+  "id": 549,
+  "char": "奇",
+  "pinyin": "qí",
+  "tier": 3
+ },
+ {
+  "id": 550,
+  "char": "颗",
+  "pinyin": "kē",
+  "tier": 3
+ },
+ {
+  "id": 551,
+  "char": "碧",
+  "pinyin": "bì",
+  "tier": 3
+ },
+ {
+  "id": 552,
+  "char": "咕",
+  "pinyin": "gū",
+  "tier": 3
+ },
+ {
+  "id": 553,
+  "char": "咚",
+  "pinyin": "dōng",
+  "tier": 3
+ },
+ {
+  "id": 554,
+  "char": "熟",
+  "pinyin": "shú",
+  "tier": 3
+ },
+ {
+  "id": 555,
+  "char": "掉",
+  "pinyin": "diào",
+  "tier": 3
+ },
+ {
+  "id": 556,
+  "char": "吓",
+  "pinyin": "xià",
+  "tier": 3
+ },
+ {
+  "id": 557,
+  "char": "鹿",
+  "pinyin": "lù",
+  "tier": 3
+ },
+ {
+  "id": 558,
+  "char": "逃",
+  "pinyin": "táo",
+  "tier": 3
+ },
+ {
+  "id": 559,
+  "char": "命",
+  "pinyin": "mìng",
+  "tier": 3
+ },
+ {
+  "id": 560,
+  "char": "壁",
+  "pinyin": "bì",
+  "tier": 3
+ },
+ {
+  "id": 561,
+  "char": "借",
+  "pinyin": "jiè",
+  "tier": 3
+ },
+ {
+  "id": 562,
+  "char": "蛇",
+  "pinyin": "shé",
+  "tier": 3
+ },
+ {
+  "id": 563,
+  "char": "断",
+  "pinyin": "duàn",
+  "tier": 3
+ },
+ {
+  "id": 564,
+  "char": "难",
+  "pinyin": "nán",
+  "tier": 3
+ },
+ {
+  "id": 565,
+  "char": "挣",
+  "pinyin": "zhēng",
+  "tier": 3
+ },
+ {
+  "id": 566,
+  "char": "拨",
+  "pinyin": "bō",
+  "tier": 3
+ },
+ {
+  "id": 567,
+  "char": "甩",
+  "pinyin": "shuǎi",
+  "tier": 3
+ },
+ {
+  "id": 568,
+  "char": "赶",
+  "pinyin": "gǎn",
+  "tier": 3
+ },
+ {
+  "id": 569,
+  "char": "光",
+  "pinyin": "guāng",
+  "tier": 3
+ },
+ {
+  "id": 570,
+  "char": "勺",
+  "pinyin": "sháo",
+  "tier": 3
+ },
+ {
+  "id": 571,
+  "char": "哭",
+  "pinyin": "kū",
+  "tier": 3
+ },
+ {
+  "id": 572,
+  "char": "唱",
+  "pinyin": "chàng",
+  "tier": 3
+ },
+ {
+  "id": 573,
+  "char": "喝",
+  "pinyin": "hē",
+  "tier": 3
+ },
+ {
+  "id": 574,
+  "char": "壶",
+  "pinyin": "hú",
+  "tier": 3
+ },
+ {
+  "id": 575,
+  "char": "夜",
+  "pinyin": "yè",
+  "tier": 3
+ },
+ {
+  "id": 576,
+  "char": "岛",
+  "pinyin": "dǎo",
+  "tier": 3
+ },
+ {
+  "id": 577,
+  "char": "帽",
+  "pinyin": "mào",
+  "tier": 3
+ },
+ {
+  "id": 578,
+  "char": "心",
+  "pinyin": "xīn",
+  "tier": 3
+ },
+ {
+  "id": 579,
+  "char": "杯",
+  "pinyin": "bēi",
+  "tier": 3
+ },
+ {
+  "id": 580,
+  "char": "梨",
+  "pinyin": "lí",
+  "tier": 3
+ },
+ {
+  "id": 581,
+  "char": "河",
+  "pinyin": "hé",
+  "tier": 3
+ },
+ {
+  "id": 582,
+  "char": "灯",
+  "pinyin": "dēng",
+  "tier": 3
+ },
+ {
+  "id": 583,
+  "char": "猪",
+  "pinyin": "zhū",
+  "tier": 3
+ },
+ {
+  "id": 584,
+  "char": "猫",
+  "pinyin": "māo",
+  "tier": 3
+ },
+ {
+  "id": 585,
+  "char": "球",
+  "pinyin": "qiú",
+  "tier": 3
+ },
+ {
+  "id": 586,
+  "char": "琴",
+  "pinyin": "qín",
+  "tier": 3
+ },
+ {
+  "id": 587,
+  "char": "盘",
+  "pinyin": "pán",
+  "tier": 3
+ },
+ {
+  "id": 588,
+  "char": "碗",
+  "pinyin": "wǎn",
+  "tier": 3
+ },
+ {
+  "id": 589,
+  "char": "礼",
+  "pinyin": "lǐ",
+  "tier": 3
+ },
+ {
+  "id": 590,
+  "char": "糖",
+  "pinyin": "táng",
+  "tier": 3
+ },
+ {
+  "id": 591,
+  "char": "绿",
+  "pinyin": "lǜ",
+  "tier": 3
+ },
+ {
+  "id": 592,
+  "char": "苗",
+  "pinyin": "miáo",
+  "tier": 3
+ },
+ {
+  "id": 593,
+  "char": "药",
+  "pinyin": "yào",
+  "tier": 3
+ },
+ {
+  "id": 594,
+  "char": "菜",
+  "pinyin": "cài",
+  "tier": 3
+ },
+ {
+  "id": 595,
+  "char": "蛋",
+  "pinyin": "dàn",
+  "tier": 3
+ },
+ {
+  "id": 596,
+  "char": "蜂",
+  "pinyin": "fēng",
+  "tier": 3
+ },
+ {
+  "id": 597,
+  "char": "蝶",
+  "pinyin": "dié",
+  "tier": 3
+ },
+ {
+  "id": 598,
+  "char": "袜",
+  "pinyin": "wà",
+  "tier": 3
+ },
+ {
+  "id": 599,
+  "char": "读",
+  "pinyin": "dú",
+  "tier": 3
+ },
+ {
+  "id": 600,
+  "char": "象",
+  "pinyin": "xiàng",
+  "tier": 3
+ },
+ {
+  "id": 601,
+  "char": "路",
+  "pinyin": "lù",
+  "tier": 3
+ },
+ {
+  "id": 602,
+  "char": "跳",
+  "pinyin": "tiào",
+  "tier": 3
+ },
+ {
+  "id": 603,
+  "char": "锅",
+  "pinyin": "guō",
+  "tier": 3
+ },
+ {
+  "id": 604,
+  "char": "镜",
+  "pinyin": "jìng",
+  "tier": 3
+ },
+ {
+  "id": 605,
+  "char": "门",
+  "pinyin": "mén",
+  "tier": 3
+ },
+ {
+  "id": 606,
+  "char": "鞋",
+  "pinyin": "xié",
+  "tier": 3
+ },
+ {
+  "id": 607,
+  "char": "饼",
+  "pinyin": "bǐng",
+  "tier": 3
+ },
+ {
+  "id": 608,
+  "char": "鹅",
+  "pinyin": "é",
+  "tier": 3
+ },
+ {
+  "id": 609,
+  "char": "鼓",
+  "pinyin": "gǔ",
+  "tier": 3
+ },
+ {
+  "id": 610,
+  "char": "鼠",
+  "pinyin": "shǔ",
+  "tier": 3
+ },
+ {
+  "id": 611,
+  "char": "龙",
+  "pinyin": "lóng",
+  "tier": 3
+ },
+ {
+  "id": 612,
+  "char": "龟",
+  "pinyin": "guī",
+  "tier": 3
+ }
+]
