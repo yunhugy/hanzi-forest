@@ -1,0 +1,17 @@
+# 统一换行符：仓库内一律存 LF。
+# 否则 Windows 检出会把 CRLF 带进 CI（Linux），shell 命令末尾会多出 \r 导致执行失败。
+* text=auto eol=lf
+
+# 二进制文件不做换行转换
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
+*.ttf binary
+*.otf binary
+*.woff binary
+*.woff2 binary
+*.jks binary
+*.keystore binary
+*.apk binary
