@@ -19,9 +19,6 @@ jobs:
   build-apk:
     name: 构建 release APK
     runs-on: ubuntu-latest
-    env:
-      NODE_OPTIONS: --max-old-space-size=4096
-      GRADLE_OPTS: -Dorg.gradle.jvmargs="-Xmx4096m -XX:MaxMetaspaceSize=1024m" -Dorg.gradle.parallel=true
 
     steps:
       - name: 检出代码
@@ -48,14 +45,6 @@ jobs:
       - name: 生成原生工程（自动应用签名插件）
         run: npx expo prebuild --platform android --clean
 
-      - name: 注入 Gradle 构建优化配置
-        run: |
-          mkdir -p ~/.gradle
-          printf "org.gradle.jvmargs=-Xmx4096m -XX:MaxMetaspaceSize=1024m\norg.gradle.parallel=true\norg.gradle.daemon=false\n" >> ~/.gradle/gradle.properties
-          if [ -d android ]; then
-            printf "org.gradle.jvmargs=-Xmx4096m -XX:MaxMetaspaceSize=1024m\norg.gradle.parallel=true\norg.gradle.daemon=false\n" >> android/gradle.properties
-          fi
-
       - name: 还原签名密钥
         env:
           KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
@@ -76,7 +65,7 @@ jobs:
           ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
         run: |
           chmod +x gradlew
-          ./gradlew assembleRelease --no-daemon --stacktrace
+          ./gradlew assembleRelease --no-daemon --info
 
       - name: 上传 APK 产物
         uses: actions/upload-artifact@v4
