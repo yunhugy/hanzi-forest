@@ -45,6 +45,19 @@ jobs:
       - name: 生成原生工程（自动应用签名插件）
         run: npx expo prebuild --platform android --clean
 
+      - name: 优化 Android 构建参数（定向 arm64-v8a 架构与 4GB 内存调优）
+        run: |
+          # 1. 仅针对主流现代手机 arm64-v8a 架构编译，削减 75% 冗余 CMake 与 Dexing 负担
+          sed -i 's/^reactNativeArchitectures=.*/reactNativeArchitectures=arm64-v8a/' android/gradle.properties
+          # 2. 扩大 JVM 堆内存至 4GB，Metaspace 至 1GB
+          sed -i 's/^org.gradle.jvmargs=.*/org.gradle.jvmargs=-Xmx4096m -XX:MaxMetaspaceSize=1024m/' android/gradle.properties
+          # 3. 开启并行编译与禁用耗时过长的 PNG 重新压缩
+          echo "android.enablePngCrunchInReleaseBuilds=false" >> android/gradle.properties
+          echo "org.gradle.parallel=true" >> android/gradle.properties
+          echo "org.gradle.vfs.watch=false" >> android/gradle.properties
+          echo "=== 优化后的 gradle.properties ==="
+          cat android/gradle.properties
+
       - name: 还原签名密钥
         env:
           KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
@@ -65,11 +78,11 @@ jobs:
           ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
         run: |
           chmod +x gradlew
-          ./gradlew assembleRelease --no-daemon --info
+          ./gradlew assembleRelease -PreactNativeArchitectures=arm64-v8a --no-daemon
 
       - name: 上传 APK 产物
         uses: actions/upload-artifact@v4
         with:
-          name: hanzi-forest-apk
+          name: hanzi-forest-arm64-release-apk
           path: android/app/build/outputs/apk/release/*.apk
           if-no-files-found: error
