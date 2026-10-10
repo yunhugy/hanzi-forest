@@ -40,7 +40,7 @@ jobs:
           cache: npm
 
       - name: 安装 JS 依赖
-        run: npm ci
+        run: npm install
 
       - name: 生成原生工程（自动应用签名插件）
         run: npx expo prebuild --platform android --clean
