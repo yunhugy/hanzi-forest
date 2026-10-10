@@ -45,18 +45,23 @@ jobs:
       - name: 生成原生工程（自动应用签名插件）
         run: npx expo prebuild --platform android --clean
 
-      - name: 优化 Android 构建参数（定向 arm64-v8a 架构与 4GB 内存，安全串行）
+      - name: 优化 Android 构建参数（定向 arm64-v8a 架构与 4GB 内存）
         run: |
-          # 1. 仅针对主流 arm64-v8a 架构编译，削减 75% 冗余 CMake 与 Dexing 负担
-          sed -i 's/^reactNativeArchitectures=.*/reactNativeArchitectures=arm64-v8a/' android/gradle.properties
-          # 2. 扩大 JVM 堆内存至 4GB，Metaspace 至 1GB
-          sed -i 's/^org.gradle.jvmargs=.*/org.gradle.jvmargs=-Xmx4096m -XX:MaxMetaspaceSize=1024m/' android/gradle.properties
-          # 3. 禁用耗时的 PNG 重新压缩
-          echo "android.enablePngCrunchInReleaseBuilds=false" >> android/gradle.properties
-          # 4. 显式禁用 parallel，防止 ExpoAutolinkingPlugin 并发竞争导致 node 退出
-          echo "org.gradle.parallel=false" >> android/gradle.properties
-          echo "=== 优化后的 gradle.properties ==="
-          cat android/gradle.properties
+          python3 -c "
+          import re
+          path = 'android/gradle.properties'
+          with open(path, 'r', encoding='utf-8') as f:
+              content = f.read()
+          if not content.endswith('\n'):
+              content += '\n'
+          content = re.sub(r'^reactNativeArchitectures=.*$', 'reactNativeArchitectures=arm64-v8a', content, flags=re.MULTILINE)
+          content = re.sub(r'^org\.gradle\.jvmargs=.*$', 'org.gradle.jvmargs=-Xmx4096m -XX:MaxMetaspaceSize=1024m', content, flags=re.MULTILINE)
+          content += 'android.enablePngCrunchInReleaseBuilds=false\n'
+          with open(path, 'w', encoding='utf-8') as f:
+              f.write(content)
+          "
+          echo "=== 优化后的 gradle.properties 末尾 15 行 ==="
+          tail -n 15 android/gradle.properties
 
       - name: 还原签名密钥
         env:
@@ -78,7 +83,7 @@ jobs:
           ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
         run: |
           chmod +x gradlew
-          ./gradlew assembleRelease -x lint -x lintVitalRelease -x lintVitalAnalyzeRelease --no-daemon --stacktrace
+          ./gradlew assembleRelease -x lint -x lintVitalRelease -x lintVitalAnalyzeRelease --no-daemon
 
       - name: 上传 APK 产物
         uses: actions/upload-artifact@v4
