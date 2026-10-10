@@ -1,16 +1,21 @@
+import { useAudioPlayer } from 'expo-audio';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
+import { initAudioPlayer } from '@/features/speech/speak';
 import { hydrateVoicePref } from '@/features/speech/voices';
 import { ProgressProvider } from '@/store/progress';
 
 export default function RootLayout() {
-  // 朗读语音偏好存在本地，启动时读一次 —— 之后 speak() 就能直接用
+  // 创建全局唯一 audio player，注入 speak 工具函数
+  const player = useAudioPlayer();
+
   useEffect(() => {
+    initAudioPlayer(player);
     hydrateVoicePref().catch(() => {});
-  }, []);
+  }, [player]);
 
   return (
     <SafeAreaProvider>

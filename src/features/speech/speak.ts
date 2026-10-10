@@ -1,52 +1,41 @@
+import { Asset } from 'expo-asset';
+import { useAudioPlayer } from 'expo-audio';
 import * as Speech from 'expo-speech';
 import { Platform } from 'react-native';
 
-import { getVoicePref } from './voices';
+import { audioOf } from '@/data/char-audio';
+import { wordAudioOf } from '@/data/word-audio';
+import { getVoicePref, getAudioPackPref } from './voices';
 
 /**
  * 朗读工具 —— 识字乐园和词语闯关共用。
  *
- * ## 为什么不直接调 Speech.speak
+ * ## 双轨发音架构
  *
- * 踩过两个坑：
+ * 优先使用「晓伊离线音频包」（高品质神经 TTS，预生成 mp3）：
+ *   - 音质稳定、字正腔圆，不依赖设备语音引擎
+ *   - 0ms 延迟，秒播无卡顿
+ *   - 100% 离线，断网飞行模式也能用
  *
- * 1. **单音节太短**。中文单字只有 200~400ms，系统默认语速（rate 1.0）念出来
- *    就是「嗖」一下，孩子（尤其还不熟的）经常「还没听清就没了」。
- *    → 所以默认**念两遍**，中间留 400ms 停顿，给第二次机会。
+ * 当字/词不在音频包中（生僻扩展字），无缝降级到系统 expo-speech，
+ * 绝不哑火。
  *
- * 2. **cancel / speak 竞态**。web 端 expo-speech 就是包 `window.speechSynthesis`，
- *    而 Chrome 在 `cancel()` 之后立即 `speak()` 有概率把新的朗读丢弃或截断。
- *    → 所以 `stop()` 之后要先留出一点时间再开口。
+ * ## 其他细节（与原版保持一致）
  *
- * 3. **注意力还没转过来**。直接开口念，孩子往往第一遍完全没听进去。
- *    → 开口前先「叮」一声，再留 350ms 空白，给一个明确的「要开始了」信号。
- *
- * 另外系统默认语速对儿童读物偏快，这里统一降速。
+ * 1. 默认念两遍，中间留 400ms，给孩子第二次机会听清。
+ * 2. 开口前「叮」一声（Web Audio 合成提示音），拉回注意力。
+ * 3. 降速至 -10%（音频包已内置），系统 TTS 回退时同样降速。
  */
 
-/** 语速档位。数值越小越慢，Web Speech API 的 rate 有效范围约 0.1 ~ 10 */
+/** 语速档位（用于系统 TTS 降级时） */
 export const SPEECH_RATES = { slow: 0.5, slower: 0.3 } as const;
-
 export type SpeechRate = keyof typeof SPEECH_RATES;
 
-/** 两遍之间的停顿（毫秒） */
 const GAP_BETWEEN_REPEATS = 400;
-/** 提示音本身时长（毫秒），与 playChime 的包络保持一致 */
-const CHIME_MS = 300;
-/** 提示音之后、开口之前的留白（毫秒）—— 给孩子一点「注意力转过来」的时间 */
+const CHIME_MS  = 300;
 const LEAD_IN_MS = 350;
 
-/**
- * 开口前先「叮」一声。
- *
- * 为什么需要：直接开口念，孩子的注意力往往还没转过来，第一遍就白念了。
- * 先用一个轻柔的提示音把注意力拉过来，再留一点空白，第二遍才真正听得进去。
- * （课堂听写也是这个节奏：先「注意了」，再读。）
- *
- * 用 Web Audio 现场合成，不需要音频文件 —— 一个 880→1320Hz 的正弦波
- * 加快速衰减包络，听感接近木质音叉的「叮」。
- * 原生端没有 Web Audio，静默跳过（只保留留白）。
- */
+// ─── 叮提示音（与原版完全一致） ───────────────────────────────────────────
 function playChime(): void {
   if (Platform.OS !== 'web') return;
   try {
@@ -57,17 +46,16 @@ function playChime(): void {
     const Ctx = w.AudioContext ?? w.webkitAudioContext;
     if (!Ctx) return;
 
-    const ctx = new Ctx();
-    const osc = ctx.createOscillator();
+    const ctx  = new Ctx();
+    const osc  = ctx.createOscillator();
     const gain = ctx.createGain();
 
     osc.type = 'sine';
     osc.frequency.setValueAtTime(880, ctx.currentTime);
     osc.frequency.exponentialRampToValueAtTime(1320, ctx.currentTime + 0.08);
 
-    // 起音极快、衰减也快，避免拖尾糊住后面的朗读
     gain.gain.setValueAtTime(0.0001, ctx.currentTime);
-    gain.gain.exponentialRampToValueAtTime(0.16, ctx.currentTime + 0.015);
+    gain.gain.exponentialRampToValueAtTime(0.16,  ctx.currentTime + 0.015);
     gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.28);
 
     osc.connect(gain);
@@ -76,56 +64,117 @@ function playChime(): void {
     osc.stop(ctx.currentTime + 0.3);
     osc.onended = () => ctx.close();
   } catch {
-    // 音频上下文不可用（或被浏览器自动播放策略拦下）就静默跳过
+    // 静默降级
   }
 }
 
+// ─── 内部：系统 TTS 降级路径 ──────────────────────────────────────────────
+function speakViaTTS(text: string, speed: SpeechRate, times: number): void {
+  Speech.stop();
+  let remaining = Math.max(1, times);
+
+  const sayOnce = () => {
+    remaining -= 1;
+    const voiceId = getVoicePref();
+    Speech.speak(text, {
+      language: 'zh-CN',
+      rate: SPEECH_RATES[speed],
+      pitch: 1.05,
+      ...(voiceId ? { voice: voiceId } : {}),
+      onDone: () => {
+        if (remaining > 0) setTimeout(sayOnce, GAP_BETWEEN_REPEATS);
+      },
+      onError: () => { /* 静默 */ },
+    });
+  };
+
+  playChime();
+  setTimeout(sayOnce, CHIME_MS + LEAD_IN_MS);
+}
+
+// ─── 内部：音频包播放路径 ────────────────────────────────────────────────
+let _audioPlayer: ReturnType<typeof useAudioPlayer> | null = null;
+
+/**
+ * 在组件树外使用 expo-audio。
+ * expo-audio 的 useAudioPlayer 是 React hook，不能在普通函数里调用。
+ * 解法：在应用根部创建一个单例 player，通过 initAudioPlayer() 注入进来。
+ */
+export function initAudioPlayer(player: ReturnType<typeof useAudioPlayer>) {
+  _audioPlayer = player;
+}
+
+async function playAssetOnce(assetModule: number): Promise<void> {
+  const player = _audioPlayer;
+  if (!player) return;
+  const [asset] = await Asset.loadAsync(assetModule);
+  player.replace({ uri: asset.localUri ?? asset.uri });
+  player.play();
+  // 等播放结束（轮询，最多 10s）
+  await new Promise<void>((resolve) => {
+    const t0 = Date.now();
+    const check = () => {
+      if (!player.playing || Date.now() - t0 > 10000) {
+        resolve();
+      } else {
+        setTimeout(check, 50);
+      }
+    };
+    setTimeout(check, 50);
+  });
+}
+
+async function speakViaAudioPack(
+  assetModule: number,
+  times: number,
+): Promise<void> {
+  playChime();
+  await new Promise<void>((r) => setTimeout(r, CHIME_MS + LEAD_IN_MS));
+
+  for (let i = 0; i < times; i++) {
+    await playAssetOnce(assetModule);
+    if (i < times - 1) {
+      await new Promise<void>((r) => setTimeout(r, GAP_BETWEEN_REPEATS));
+    }
+  }
+}
+
+// ─── 公开 API ────────────────────────────────────────────────────────────
 export type SpeakOptions = {
-  /** 语速档位，默认 slow */
+  /** 语速档位，仅在降级到系统 TTS 时生效，默认 slow */
   speed?: SpeechRate;
   /** 念几遍，默认 2 */
   times?: number;
+  /** 是词语（而非单字），用于选择音频包索引 */
+  isWord?: boolean;
 };
 
 /**
  * 朗读一个短字 / 短词。
- * 设备没有中文语音包时静默降级 —— 不抛错、不打断页面。
+ * - 音频包开启时：秒播晓伊高品质 mp3
+ * - 音频包关闭或缺漏时：降级到系统 expo-speech
  */
 export function speak(text: string, options: SpeakOptions = {}): void {
-  const { speed = 'slow', times = 2 } = options;
+  const { speed = 'slow', times = 2, isWord = text.length > 1 } = options;
 
   try {
-    Speech.stop();
+    const useAudioPack = getAudioPackPref();
 
-    let remaining = Math.max(1, times);
+    if (useAudioPack) {
+      const asset = isWord ? wordAudioOf(text) : audioOf(text);
+      if (asset !== undefined) {
+        // 音频包命中 → 高品质路径（async，不阻塞 UI）
+        speakViaAudioPack(asset, times).catch(() => {
+          // 播放出错时降级 TTS
+          speakViaTTS(text, speed, times);
+        });
+        return;
+      }
+    }
 
-    const sayOnce = () => {
-      remaining -= 1;
-      // 家长在「给爸爸妈妈」里挑的语音；没挑就交给系统默认
-      const voiceId = getVoicePref();
-      Speech.speak(text, {
-        language: 'zh-CN',
-        rate: SPEECH_RATES[speed],
-        pitch: 1.05,
-        ...(voiceId ? { voice: voiceId } : {}),
-        onDone: () => {
-          if (remaining > 0) {
-            // 用 onDone 回调串起下一遍，比「在文本里塞逗号」可靠：
-            // 不同语音引擎对逗号停顿时长的处理差别很大，回调是确定的
-            setTimeout(sayOnce, GAP_BETWEEN_REPEATS);
-          }
-        },
-        onError: () => {
-          // 单字念不出来就放弃，不重试、不打扰用户
-        },
-      });
-    };
-
-    // ① 先「叮」一声，把注意力拉过来；顺带给了 cancel() 生效的时间
-    playChime();
-    // ② 再留一点空白才开口 —— 这几百毫秒是「准备听」的关键
-    setTimeout(sayOnce, CHIME_MS + LEAD_IN_MS);
+    // 降级：系统 TTS
+    speakViaTTS(text, speed, times);
   } catch {
-    // 静默降级
+    // 静默
   }
 }

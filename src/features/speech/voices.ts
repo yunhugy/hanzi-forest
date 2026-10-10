@@ -4,17 +4,13 @@ import * as Speech from 'expo-speech';
 /**
  * 朗读语音的选择与记忆。
  *
- * ## 为什么需要
- *
- * expo-speech 在 web 端包的是浏览器的 `window.speechSynthesis`，
- * 实际发声的是**操作系统自带的 TTS 引擎**。不同机器装的语音差别很大 ——
- * 有的只有一两个中文语音（音质还一般），有的装了五六个。
- * 系统默认挑的那个不一定好听，所以让家长自己选一个。
- *
- * 选择结果存在本地，下次打开还是同一个。
+ * 新增：音频包开关（useAudioPack）
+ *   - true（默认）：优先使用预生成的晓伊高品质离线音频包
+ *   - false：回退到系统 expo-speech（让家长自选语音引擎时用）
  */
 
-const PREF_KEY = 'hanzi-forest:speech:voice:v1';
+const PREF_KEY_VOICE      = 'hanzi-forest:speech:voice:v1';
+const PREF_KEY_AUDIO_PACK = 'hanzi-forest:speech:audio-pack:v1';
 
 export type VoiceOption = {
   /** voiceURI，作为唯一标识 */
@@ -29,18 +25,29 @@ export type VoiceOption = {
 
 /** 当前选中的语音 id，null = 用系统默认 */
 let currentVoiceId: string | null = null;
+/** 是否启用离线音频包，默认 true */
+let currentAudioPack: boolean = true;
 
 export function getVoicePref(): string | null {
   return currentVoiceId;
 }
 
+export function getAudioPackPref(): boolean {
+  return currentAudioPack;
+}
+
 /** 从本地存档读偏好。应用启动时调一次即可。 */
 export async function hydrateVoicePref(): Promise<string | null> {
   try {
-    const raw = await AsyncStorage.getItem(PREF_KEY);
-    currentVoiceId = raw || null;
+    const [voiceRaw, packRaw] = await Promise.all([
+      AsyncStorage.getItem(PREF_KEY_VOICE),
+      AsyncStorage.getItem(PREF_KEY_AUDIO_PACK),
+    ]);
+    currentVoiceId   = voiceRaw || null;
+    currentAudioPack = packRaw === null ? true : packRaw === 'true';
   } catch {
-    currentVoiceId = null;
+    currentVoiceId   = null;
+    currentAudioPack = true;
   }
   return currentVoiceId;
 }
@@ -49,19 +56,26 @@ export async function hydrateVoicePref(): Promise<string | null> {
 export async function setVoicePref(id: string | null): Promise<void> {
   currentVoiceId = id;
   try {
-    if (id) await AsyncStorage.setItem(PREF_KEY, id);
-    else await AsyncStorage.removeItem(PREF_KEY);
+    if (id) await AsyncStorage.setItem(PREF_KEY_VOICE, id);
+    else     await AsyncStorage.removeItem(PREF_KEY_VOICE);
   } catch {
     // 存不下也不影响本次会话
   }
 }
 
+/** 切换音频包开关，并持久化。 */
+export async function setAudioPackPref(enabled: boolean): Promise<void> {
+  currentAudioPack = enabled;
+  try {
+    await AsyncStorage.setItem(PREF_KEY_AUDIO_PACK, String(enabled));
+  } catch {
+    // 静默
+  }
+}
+
 /**
  * 列出设备上的中文语音。
- *
  * 排序：本地语音优先（不依赖网络，更稳定），其次按名称。
- * 浏览器在页面刚加载时 voices 列表可能是空的 —— expo-speech 内部已经处理了
- * 这个时序问题（监听 onvoiceschanged），所以直接 await 就行。
  */
 export async function listChineseVoices(): Promise<VoiceOption[]> {
   try {
@@ -69,13 +83,12 @@ export async function listChineseVoices(): Promise<VoiceOption[]> {
     return all
       .filter((v) => (v.language ?? '').toLowerCase().startsWith('zh'))
       .map((v) => {
-        // web 端会多带 localService / voiceURI，原生端没有
         const extra = v as unknown as { localService?: boolean; voiceURI?: string };
         return {
-          id: v.identifier,
-          name: v.name,
+          id:       v.identifier,
+          name:     v.name,
           language: v.language,
-          local: !!extra.localService,
+          local:    !!extra.localService,
         };
       })
       .sort((a, b) => {
