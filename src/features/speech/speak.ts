@@ -22,7 +22,7 @@ import { getVoicePref, getAudioPackPref } from './voices';
  *
  * ## 其他细节（与原版保持一致）
  *
- * 1. 默认念两遍，中间留 400ms，给孩子第二次机会听清。
+ * 1. 默认念两遍，中间留 1500ms，给孩子第二次机会听清。
  * 2. 开口前「叮」一声（Web Audio 合成提示音），拉回注意力。
  * 3. 降速至 -10%（音频包已内置），系统 TTS 回退时同样降速。
  */
@@ -31,7 +31,7 @@ import { getVoicePref, getAudioPackPref } from './voices';
 export const SPEECH_RATES = { slow: 0.85, slower: 0.7 } as const;
 export type SpeechRate = keyof typeof SPEECH_RATES;
 
-const GAP_BETWEEN_REPEATS = 2500;
+const GAP_BETWEEN_REPEATS = 1500;
 const CHIME_MS  = 300;
 const LEAD_IN_MS = 350;
 
