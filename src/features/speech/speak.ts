@@ -28,10 +28,10 @@ import { getVoicePref, getAudioPackPref } from './voices';
  */
 
 /** 语速档位（用于系统 TTS 降级时） */
-export const SPEECH_RATES = { slow: 0.5, slower: 0.3 } as const;
+export const SPEECH_RATES = { slow: 0.85, slower: 0.7 } as const;
 export type SpeechRate = keyof typeof SPEECH_RATES;
 
-const GAP_BETWEEN_REPEATS = 400;
+const GAP_BETWEEN_REPEATS = 2500;
 const CHIME_MS  = 300;
 const LEAD_IN_MS = 350;
 
@@ -110,18 +110,8 @@ async function playAssetOnce(assetModule: number): Promise<void> {
   const [asset] = await Asset.loadAsync(assetModule);
   player.replace({ uri: asset.localUri ?? asset.uri });
   player.play();
-  // 等播放结束（轮询，最多 10s）
-  await new Promise<void>((resolve) => {
-    const t0 = Date.now();
-    const check = () => {
-      if (!player.playing || Date.now() - t0 > 10000) {
-        resolve();
-      } else {
-        setTimeout(check, 50);
-      }
-    };
-    setTimeout(check, 50);
-  });
+  // 音频文件总长约 2.1 秒，等待完整播放完毕
+  await new Promise<void>((resolve) => setTimeout(resolve, 2200));
 }
 
 async function speakViaAudioPack(
