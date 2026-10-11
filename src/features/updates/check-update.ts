@@ -1,6 +1,8 @@
 import Constants from 'expo-constants';
 import { Alert, Linking } from 'react-native';
 
+import { startUpdateDownload } from './download';
+
 export type UpdateInfo = {
   hasUpdate: boolean;
   currentVersion: string;
@@ -80,7 +82,13 @@ export async function promptUpdate(manual = false): Promise<void> {
           text: '立即下载更新',
           style: 'default',
           onPress: () => {
-            Linking.openURL(downloadUrl).catch(() => {});
+            // 优先走 App 内下载：自动测速选线路、带进度条、下完直接调起安装
+            if (info.apkUrl) {
+              startUpdateDownload(info.apkUrl, info.latestVersion).catch(() => {});
+            } else {
+              // 没有 APK 资产时退回浏览器打开发布页
+              Linking.openURL(downloadUrl).catch(() => {});
+            }
           },
         },
       ]

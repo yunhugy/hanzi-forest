@@ -7,6 +7,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { initAudioPlayer } from '@/features/speech/speak';
 import { hydrateVoicePref } from '@/features/speech/voices';
 import { promptUpdate } from '@/features/updates/check-update';
+import { DownloadModal } from '@/features/updates/download-modal';
 import { ProgressProvider } from '@/store/progress';
 
 export default function RootLayout() {
@@ -30,6 +31,7 @@ export default function RootLayout() {
         <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: '#F7F4EA' } }}>
           <Stack.Screen name="(drawer)" />
         </Stack>
+        <DownloadModal />
       </ProgressProvider>
     </SafeAreaProvider>
   );
