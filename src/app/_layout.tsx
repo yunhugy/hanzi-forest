@@ -6,6 +6,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { initAudioPlayer } from '@/features/speech/speak';
 import { hydrateVoicePref } from '@/features/speech/voices';
+import { promptUpdate } from '@/features/updates/check-update';
 import { ProgressProvider } from '@/store/progress';
 
 export default function RootLayout() {
@@ -15,6 +16,11 @@ export default function RootLayout() {
   useEffect(() => {
     initAudioPlayer(player);
     hydrateVoicePref().catch(() => {});
+    // 延迟 2.5 秒静默检测云端新版本，仅有新版本时友好提示
+    const timer = setTimeout(() => {
+      promptUpdate(false).catch(() => {});
+    }, 2500);
+    return () => clearTimeout(timer);
   }, [player]);
 
   return (

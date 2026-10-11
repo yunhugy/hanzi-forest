@@ -12,6 +12,7 @@ import {
 } from '@/features/parents/report';
 import { ALL_HANZI, TOTAL_CHARS } from '@/features/shizi/quiz';
 import { VoicePicker } from '@/features/speech/voice-picker';
+import { UpdateCard } from '@/features/updates/update-card';
 import { useProgress } from '@/store/progress';
 import { colors, font, radius, shadow, spacing } from '@/theme';
 
@@ -57,6 +58,7 @@ export default function ParentsScreen() {
             </Text>
           </View>
           <VoicePicker />
+          <UpdateCard />
         </ScrollView>
       </View>
     );
@@ -168,6 +170,9 @@ export default function ParentsScreen() {
 
         {/* 朗读语音（家长设一次就行） */}
         <VoicePicker />
+
+        {/* 版本与在线更新 */}
+        <UpdateCard />
 
         <Text style={styles.footer}>每个孩子都有自己的节奏，陪伴比速度更重要</Text>
       </ScrollView>
