@@ -7,6 +7,7 @@ import { ScreenHeader } from '@/components/screen-header';
 import { StarBadge } from '@/components/star-badge';
 import charEmoji from '@/data/char-emoji.json';
 import { imageOf } from '@/data/char-images';
+import { MatchGame } from '@/features/shizi/match';
 import {
   ALL_HANZI,
   buildRound,
@@ -16,6 +17,7 @@ import {
   type QuizMode,
   type TierFilter,
 } from '@/features/shizi/quiz';
+import { hapticLight, playSfx } from '@/features/sound/effects';
 import { speak } from '@/features/speech/speak';
 import { useProgress } from '@/store/progress';
 import { colors, font, radius, shadow, spacing } from '@/theme';
@@ -83,7 +85,13 @@ export default function ShiziScreen() {
     if (answered) return;
     setPicked(char);
     const ok = char === question.answer.char;
-    if (ok) setCorrectCount((c) => c + 1);
+    if (ok) {
+      playSfx('correct');
+      hapticLight();
+      setCorrectCount((c) => c + 1);
+    } else {
+      playSfx('wrong');
+    }
     record(question.answer.char, ok);
   };
 
@@ -137,7 +145,10 @@ export default function ShiziScreen() {
       </View>
 
       <ScrollView contentContainerStyle={styles.body} showsVerticalScrollIndicator={false}>
-        {finished ? (
+        {mode === 'match' ? (
+          /* 翻卡配对是独立玩法：自带发牌与结算，不走「一题一答」的流程 */
+          <MatchGame tier={tier} />
+        ) : finished ? (
           <FinishCard
             correct={correctCount}
             total={round.length}
@@ -152,7 +163,6 @@ export default function ShiziScreen() {
               {mode === 'picture' && <PictureBody question={question} />}
               {mode === 'listen' && <ListenBody question={question} />}
               {mode === 'learn' && <LearnBody question={question} />}
-              {mode === 'match' && <MatchPlaceholder />}
 
               {/* 选项 */}
               {mode !== 'learn' && mode !== 'match' && (
@@ -282,15 +292,6 @@ function LearnBody({ question }: { question: Question }) {
         <Ionicons name="volume-high" size={20} color={colors.primaryDeep} />
         <Text style={styles.listenLabel}>读给我听</Text>
       </Pressable>
-    </View>
-  );
-}
-
-function MatchPlaceholder() {
-  return (
-    <View style={styles.bodyBox}>
-      <Text style={styles.bigEmoji}>🃏</Text>
-      <Text style={styles.noPic}>翻卡配对正在开发中</Text>
     </View>
   );
 }

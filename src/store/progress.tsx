@@ -9,6 +9,8 @@ import React, {
   useState,
 } from 'react';
 
+import { dueChars, nextReviewAtFor } from '@/features/review/schedule';
+
 const STORAGE_KEY = 'hanzi-forest:progress:v1';
 
 export type CharProgress = {
@@ -18,6 +20,10 @@ export type CharProgress = {
   wrong: number;
   /** 最后练习时间戳 */
   lastAt: number;
+  /** 连续答对次数 —— 复习间隔的依据；旧存档没有这个字段，按 0 处理 */
+  streakCorrect?: number;
+  /** 下次该复习的时间戳；缺失或 0 视为「今天就该复习」（兼容旧存档） */
+  nextReviewAt?: number;
 };
 
 export type ProgressState = {
@@ -67,6 +73,8 @@ type Ctx = {
   learnedCount: number;
   /** 已练过的字数 */
   practicedCount: number;
+  /** 今天该复习的字数（首页 / 家长中心展示用） */
+  dueReviewCount: number;
   reset: () => void;
 };
 
@@ -118,6 +126,9 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
       // 同一天不重复累加连续天数；隔天 +1；断了重来
       const streak = gap === 0 ? Math.max(prev.streak, 1) : gap === 1 ? prev.streak + 1 : 1;
 
+      // 复习计划：答对连对次数 +1，答错清零重来
+      const nextStreakCorrect = correct ? (prevChar.streakCorrect ?? 0) + 1 : 0;
+
       return {
         chars: {
           ...prev.chars,
@@ -125,6 +136,8 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
             correct: prevChar.correct + (correct ? 1 : 0),
             wrong: prevChar.wrong + (correct ? 0 : 1),
             lastAt: Date.now(),
+            streakCorrect: nextStreakCorrect,
+            nextReviewAt: nextReviewAtFor(correct, nextStreakCorrect),
           },
         },
         stars: prev.stars + (correct ? 1 : 0),
@@ -146,9 +159,11 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
 
   const practicedCount = useMemo(() => Object.keys(state.chars).length, [state.chars]);
 
+  const dueReviewCount = useMemo(() => dueChars(state.chars).length, [state.chars]);
+
   const value = useMemo(
-    () => ({ state, ready, record, learnedCount, practicedCount, reset }),
-    [state, ready, record, learnedCount, practicedCount, reset],
+    () => ({ state, ready, record, learnedCount, practicedCount, dueReviewCount, reset }),
+    [state, ready, record, learnedCount, practicedCount, dueReviewCount, reset],
   );
 
   return <ProgressContext.Provider value={value}>{children}</ProgressContext.Provider>;

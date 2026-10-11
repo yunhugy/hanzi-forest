@@ -13,6 +13,7 @@ import {
   type PinyinQuestion,
 } from '@/features/pinyin/quiz';
 import type { TierFilter } from '@/features/shizi/quiz';
+import { hapticLight, playSfx } from '@/features/sound/effects';
 import { useProgress } from '@/store/progress';
 import { colors, font, radius, shadow, spacing } from '@/theme';
 
@@ -63,7 +64,13 @@ export default function PinyinScreen() {
     if (answered || !question) return;
     setPicked(choice);
     const ok = choice === question.correct;
-    if (ok) setCorrectCount((c) => c + 1);
+    if (ok) {
+      playSfx('correct');
+      hapticLight();
+      setCorrectCount((c) => c + 1);
+    } else {
+      playSfx('wrong');
+    }
     // 按题里的每个字记账，和词语闯关保持一致
     question.chars.forEach((c) => record(c, ok));
   };

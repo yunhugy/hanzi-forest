@@ -25,6 +25,11 @@ export default function DrawerLayout() {
       <Drawer.Screen name="cards" options={{ title: '我的汉字卡' }} />
       <Drawer.Screen name="growth" options={{ title: '成长足迹' }} />
       <Drawer.Screen name="parents" options={{ title: '给爸爸妈妈' }} />
+      {/* 复习页从首页卡片进入，不占抽屉入口 */}
+      <Drawer.Screen
+        name="review"
+        options={{ title: '今日复习', drawerItemStyle: { display: 'none' } }}
+      />
     </Drawer>
   );
 }

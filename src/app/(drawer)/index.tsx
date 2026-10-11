@@ -11,7 +11,7 @@ import { colors, font, radius, shadow, spacing } from '@/theme';
 
 export default function HomeScreen() {
   const router = useRouter();
-  const { state, learnedCount, practicedCount } = useProgress();
+  const { state, learnedCount, practicedCount, dueReviewCount } = useProgress();
 
   const ratio = Math.min(1, learnedCount / TOTAL_CHARS);
   // 每 60 个字长高一档，共 10 档，树越来越大
@@ -54,6 +54,22 @@ export default function HomeScreen() {
             <Ionicons name="arrow-forward" size={20} color={colors.white} />
           </View>
         </Pressable>
+
+        {/* 今日复习 —— 有到期的字才出现，没有就不打扰 */}
+        {dueReviewCount > 0 && (
+          <Pressable
+            style={styles.reviewCard}
+            onPress={() => router.push('/review' as never)}>
+            <View style={styles.reviewIcon}>
+              <Ionicons name="refresh" size={20} color={colors.primaryDeep} />
+            </View>
+            <View style={styles.reviewTextWrap}>
+              <Text style={styles.reviewTitle}>今天要复习 {dueReviewCount} 个字</Text>
+              <Text style={styles.reviewSub}>趁还没忘，再练一遍记得更牢</Text>
+            </View>
+            <Ionicons name="chevron-forward" size={18} color={colors.textMuted} />
+          </Pressable>
+        )}
 
         {/* 三个小数据 */}
         <View style={styles.statsRow}>
@@ -137,6 +153,27 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  reviewCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.md,
+    backgroundColor: colors.primarySoft,
+    borderRadius: radius.lg,
+    paddingVertical: spacing.md,
+    paddingHorizontal: spacing.lg,
+  },
+  reviewIcon: {
+    width: 40,
+    height: 40,
+    borderRadius: radius.pill,
+    backgroundColor: colors.surface,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  reviewTextWrap: { flex: 1 },
+  reviewTitle: { fontSize: font.body, fontWeight: '700', color: colors.primaryDeep },
+  reviewSub: { fontSize: font.tiny, color: colors.textSub, marginTop: 2 },
 
   statsRow: { flexDirection: 'row', gap: spacing.md },
   statCard: {

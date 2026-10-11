@@ -12,6 +12,7 @@ import {
   type WordQuestion,
 } from '@/features/ciyu/words';
 import type { TierFilter } from '@/features/shizi/quiz';
+import { hapticLight, playSfx } from '@/features/sound/effects';
 import { speak } from '@/features/speech/speak';
 import { useProgress } from '@/store/progress';
 import { colors, font, radius, shadow, spacing } from '@/theme';
@@ -75,7 +76,13 @@ export default function CiyuScreen() {
     if (answered) return;
     setPicked(choice);
     const ok = isRightPick(choice);
-    if (ok) setCorrectCount((c) => c + 1);
+    if (ok) {
+      playSfx('correct');
+      hapticLight();
+      setCorrectCount((c) => c + 1);
+    } else {
+      playSfx('wrong');
+    }
     // 按「词里的每个字」记账 —— 组词本身就是对这两个字的巩固，
     // 这样识字乐园 / 字库 / 成长足迹都能同步看到进度
     question.answer.chars.forEach((c) => record(c, ok));
