@@ -1,56 +1,162 @@
-# Welcome to your Expo app 👋
+# 🌳 汉字小森林
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> 认识一个字，森林就长大一点。
 
-## Get started
+一款给 **学龄前 / 小学一年级**孩子用的汉字识字养成 App。
+把「认字」这件枯燥的事，变成一场看得见成长的养育游戏 —— 每认识一个字，小森林就长高一档。
 
-1. Install dependencies
+**Android 单平台 · 完全离线可用 · 不需要注册登录 · 无广告**
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## ✨ 核心特色
 
-   ```bash
-   npx expo start
-   ```
+- **离线发音包**：612 个汉字 + 192 个词语的音频随包内置（晓伊神经音色），断网也能读。
+  每个音频前置了 300ms 静音垫，专治安卓扬声器冷启动「吞声母」的问题。
+- **森林养成**：每认识一个字森林长高一档，共 10 档（🌱 → 🌲），进度条看得见。
+- **间隔重复复习**：答错的字明天回炉；连对的复习间隔按 1 → 3 → 7 → 14 → 30 天递进，
+  只练「快忘的字」，不做无用功。
+- **三条学习线打通**：识字 / 组词 / 拼音 共用同一份进度，练过的字互相巩固。
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🎮 功能地图
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+| 模块 | 说明 |
+| --- | --- |
+| 🌱 **我的小森林** | 首页：森林成长进度、今日主行动、今日复习入口 |
+| 📖 **识字乐园** | 4 种题型：认识汉字 · 看图识字 · 听音选字 · 翻卡配对 |
+| 🧩 **词语闯关** | 3 种题型：认词语 · 补字 · 听音选词（192 个词语） |
+| 🔤 **拼音练习** | 7 种题型：看拼音选词 · 看词选拼音 · 声调 · 判断类别 · 分类筐 · 易混音 · 综合 |
+| 📚 **612 字库** | 按档位浏览全部汉字，点开看详情与配图 |
+| 🃏 **我的汉字卡** | 练过的字自动收集成卡片，掌握的字会亮起来 |
+| 📈 **成长足迹** | 认识字数 / 练过字数 / 正确率 / 连续打卡 + 最近练的字 |
+| 👨‍👩‍👧 **给爸爸妈妈** | 每周学习报告、易错字排行、温和的学习建议、手动检查更新 |
+| 🔁 **今日复习** | 只练到期的字（首页有到期字时才出现，不打扰） |
 
-## Get a fresh project
+**难度档位**：全部 / 初识汉字 / 进阶练习 / 继续探索 —— 三个档位按识字难度分层，孩子可以循序渐进。
 
-When you're ready, run:
+**「已认识」的判定**：同一个字答对 **2 次**才算掌握，避免蒙对。
 
-```bash
-npm run reset-project
+---
+
+## 🗂 目录结构
+
+```
+src/
+├── app/                    # Expo Router 路由（文件即页面）
+│   ├── _layout.tsx         # 根布局：音频播放器 / 更新检查 / 下载弹层
+│   └── (drawer)/           # 抽屉导航下的各功能页
+├── components/             # 通用组件（页头 / 星星徽章 / 抽屉内容）
+├── features/               # 按领域拆分的业务逻辑
+│   ├── shizi/              # 识字：出题 + 翻卡配对
+│   ├── ciyu/               # 词语：出题
+│   ├── pinyin/             # 拼音：出题 + 声调 + 易混音
+│   ├── review/             # 复习调度（间隔重复）
+│   ├── speech/             # 朗读：离线音频包 + 系统 TTS 降级
+│   ├── sound/              # 音效与触感反馈
+│   ├── updates/            # 在线更新：检查 / 多源下载 / 进度弹层
+│   └── parents/            # 家长报告计算
+├── data/                   # 字库 / 词库 / 配图 / 音频索引（多为脚本生成）
+├── store/                  # 进度存档（Context + AsyncStorage，带防抖落盘）
+└── theme/                  # 设计令牌（颜色 / 圆角 / 间距 / 字号）
+
+assets/audio/
+├── chars/                  # 612 个汉字音频
+├── words/                  # 192 个词语音频
+└── effects/                # 3 个交互音效（答对 / 答错 / 翻卡）
+
+scripts/
+├── gen_audio.py            # 用 edge-tts 批量合成字词音频
+└── gen_audio_index.py      # 生成 src/data 下的音频索引
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-### Other setup steps
+## 🛠 技术栈
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+| 领域 | 选型 |
+| --- | --- |
+| 框架 | Expo SDK 57 · React 19 · React Native 0.86 |
+| 路由 | Expo Router（文件式路由 + 抽屉导航） |
+| 语言 | TypeScript（`strict: true`） |
+| 编译优化 | React Compiler（`experiments.reactCompiler`） |
+| 发音 | `expo-audio`（离线音频包，默认） + `expo-speech`（系统 TTS 降级） |
+| 存档 | `@react-native-async-storage/async-storage`（单 key + 400ms 防抖） |
+| 更新 | `expo-file-system` + `expo-intent-launcher`（应用内下载并安装） |
 
-## Learn more
+**字库来源**：人教版（统编版）小学语文一年级识字表 2024 新版 568 字为骨架，
+优先用 137 个配图字补足到 **612 字**，让「看图识字」与「认识汉字」的题库完全打通。
 
-To learn more about developing your project with Expo, look at the following resources:
+---
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 🚀 本地开发
 
-## Join the community
+```bash
+npm install
 
-Join our community of developers creating universal apps.
+npm run android     # 启动安卓开发构建（需本地 Android SDK）
+npm start           # 只起 Metro 开发服务器
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+npm run typecheck   # 类型检查（tsc --noEmit）
+npm run lint        # 代码检查
+```
+
+> ⚠️ 新增带原生代码的依赖后，必须重新构建原生工程（`android/`、`ios/` 由
+> `expo prebuild` 生成，**不进仓库、不要手改**）。原生行为统一在 `app.json`
+> 和 config plugin 里配置。
+
+---
+
+## 📦 构建与发布
+
+APK 由 **GitHub Actions** 构建，无需本地 Android 环境。
+
+**工作流**：`.github/workflows/android-build.yml`
+
+- 触发方式：手动（workflow_dispatch）或推送 `v*` 标签
+- 定向 **arm64-v8a** 单架构（构建时间从 66 分钟压到约 13 分钟）
+- Gradle 堆内存 4GB、跳过 Lint 任务
+
+**发布一个新版本的完整流程：**
+
+1. 同时改 `app.json` 和 `package.json` 里的 `version`
+2. 提交并推送到 `main`
+3. 手动触发构建工作流，等约 13 分钟
+4. 下载构建产物，重命名为 `hanzi-forest-vX.Y.Z-arm64.apk`
+5. 在 GitHub 创建 Release，tag 形如 `vX.Y.Z`，并上传该 APK
+
+> 🔴 **关键约定：Release 资产名必须以 `.apk` 结尾**。
+> App 内的更新检查取的是「assets 里第一个以 `.apk` 结尾的文件」，
+> 名字不对就会找不到下载链接。
+
+---
+
+## 🔄 应用内更新
+
+App 启动 2.5 秒后会静默检查 `releases/latest`，有新版本时弹窗提示；
+家长也可以在「给爸爸妈妈」页手动检查。
+
+点「立即下载更新」后**全程不出 App**：
+
+```
+并发探测多条线路的实时速度 → 挑最快的下载（带进度条）→ 自动调起系统安装器
+```
+
+某条线路失败会自动换下一条，GitHub 直连永远兜底。
+首次安装时若系统拦截，会提示去开启「安装未知应用」权限。
+
+---
+
+## 🎨 设计约定
+
+- **色彩**：森林绿主色 + 米白背景，低饱和、大圆角、高可读（见 `src/theme`）
+- **文案**：温和、不说教、不催促 —— *「每个孩子都有自己的节奏，陪伴比速度更重要」*
+- **反馈**：答对有音效 + 轻振动，答错只有柔和提示音，不打击信心
+- **不打扰**：没有到期的复习内容时，首页不出现复习入口
+
+---
+
+## 📄 许可
+
+见 [LICENSE](./LICENSE)。
